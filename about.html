@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Menu</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Logo</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="toggle"></div>
+    </nav>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+</html>
+*<style>
+
+/* Reset default styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Style the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Style the navigation menu */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style the toggle button */
+.toggle {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+/* Styles for the responsive menu */
+.responsive {
+  display: block;
+}
+
+.responsive li {
+  margin-bottom: 10px;
+}
+
+.responsive li a {
+  color: #333;
+}
+  </style>
+
