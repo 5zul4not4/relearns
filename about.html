@@ -1,102 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Responsive Menu</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Logo</div>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="toggle"></div>
-    </nav>
-  </header>
+  <nav>
+    <div class="logo">
+      <a href="#">Logo</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
 
   <script src="script.js"></script>
 </body>
 </html>
-*<style>
-
-/* Reset default styles */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Style the header */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-/* Style the logo */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Style the navigation menu */
+<style>
 nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-.menu {
-  list-style-type: none;
+.nav-links {
   display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
 }
 
-.menu li {
-  margin-right: 20px;
+.nav-links li {
+  list-style: none;
+  margin-left: 20px;
 }
 
-.menu li a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
 }
 
-/* Style the toggle button */
-.toggle {
+.burger {
   display: none;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
   cursor: pointer;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .menu {
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
     display: none;
   }
 
-  .toggle {
+  .burger {
     display: block;
   }
 }
-
-/* Styles for the responsive menu */
-.responsive {
-  display: block;
+.nav-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.responsive li {
-  margin-bottom: 10px;
+.nav-active li {
+  opacity: 0;
 }
 
-.responsive li a {
-  color: #333;
+.nav-active li a {
+  color: #fff;
 }
-  </style>
 
+.burger .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger .line2 {
+  opacity: 0;
+}
+
+.burger .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+</style>
