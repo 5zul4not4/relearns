@@ -4,7 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+a{
+    text-decoration: none;
+}
 body {
     background: #080808;
     color: #fff;
@@ -433,7 +435,7 @@ nav .fas {
 
     /* Show the navigation menu on small screens */
     nav ul {
-        display: none;
+        display: block;
     }
 
     nav .fas {
@@ -442,7 +444,7 @@ nav .fas {
     }
 
     nav ul {
-        background: #b54768;
+        background: #1d1c1c;
         position: fixed;
         top: 0;
         width: 200px;
