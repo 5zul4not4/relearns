@@ -483,5 +483,27 @@ nav .fas {
     .btn.btn4:active {
         background: #ff004f;
     }
-    
+    .find{
+        margin-top: 80px;
+    }
+
+    #srch{
+        height: 50px;
+        width: 95%;
+        border-top: none;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    #find_btn{
+        height: 50px;
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 22%;
+        font-size: 20px;
+        border-radius: 20px ;
+        background-color: #262626;
+        border-color: rgb(240, 16, 16);
+        transition: background 0.5;
+    }
 }
