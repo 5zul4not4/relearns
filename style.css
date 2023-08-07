@@ -421,7 +421,7 @@ nav .fas {
 
     /* Adjust the header image and text size for small screens */
     #header {
-        background-image: url(images/phone-background.png);
+        background-image: url(images/background.png);
     }
 
     .header-text {
@@ -466,4 +466,22 @@ nav .fas {
         display: block;
         margin: 25px;
     }
+    .reg_btns{
+        margin-top: -300px;
+    }
+
+    .btn.btn4 {
+        background: #070707;
+        margin-top: -30px;
+        width: 95%;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 20px ;
+        border-color: rgb(240, 16, 16);
+        transition: background 0.5;
+    }
+    .btn.btn4:active {
+        background: #ff004f;
+    }
+    
 }
