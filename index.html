@@ -18,27 +18,33 @@
                 <a href="#"><img src="images/logo.png" class="logo"></img></a>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fas fa-times"></i>
                 </ul>
                 <i class="fas fa-bars"></i>
             </nav>
             <div class="header-text">
                 <div class="reg_btns">
-                <a href="#"><button type="button" class="btn btn4">For Tutors</button></a>
-                <a href="#"><button type="button" class="btn btn4">For Parents</button></a>
-                <a href="#"><button type="button" class="btn btn4">For Students</button></a>
+                <a href="tutor-reg.html"><button type="button" class="btn btn4">For Tutors</button></a>
+                <a href="parents-reg.html"><button type="button" class="btn btn4">For Parents</button></a>
+                <a href="students-reg.html"><button type="button" class="btn btn4">For Students</button></a>
                 </div>
                 <p>Hello Learners</p>
                 <h1>Find Your <span>Nearby</span><br>Tuition Center</h1>
             </div>
-            <div class="find">
-                <input type="text" name="search" id="srch" placeholder="Enter Your Location / Pincode"><br>
-                <button type="button" id="find_btn">Find Your Tutor</button>
+            
+            <div class="search-box">
+                <div class="rowsrch">
+                    <input type="text" id="input-box" placeholder="Enter Your Location / Pincode" autocomplete="off">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                    <div class="result-box">
+                    </div>
             </div>
+            
         </div>
     </div>
     <!-- ----------ABOUT---------- -->
@@ -187,34 +193,8 @@
             <p>Copyright @ 2023 Relearns. All rights reserved. </p>
         </div>
     </div>
-
-
-
-    <script>
-        var tabLinks = document.getElementsByClassName('tab-links');
-        var tabContents = document.getElementsByClassName('tab-contents');
-
-        function openTab(tabName) {
-            for (tabLink of tabLinks) {
-                tabLink.classList.remove('active-link');
-            }
-            for (tabContent of tabContents) {
-                tabContent.classList.remove('active-tab');
-            }
-            event.currentTarget.classList.add('active-link');
-            document.getElementById(tabName).classList.add('active-tab');
-        }
-
-        // JavaScript for handling the mobile navigation menu
-        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-
-        document.querySelector('.fas.fa-times').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.remove('show');
-        });
-
-    </script>
+<script src="script.js"></script>
+<script src="autocomplete.js"></script>
 </body>
 
 </html>
