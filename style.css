@@ -437,10 +437,19 @@ nav .fas {
     nav ul {
         display: block;
     }
-
+.logo{
+        position: fixed;
+    }
     nav .fas {
         display: block;
         font-size: 25px;
+        margin-top: 30px;
+        margin-left: 75%;
+        position: fixed;
+    }
+    nav .fa-times{
+        margin-left: 45%;
+        color: rgb(215, 50, 50);
     }
 
     nav ul {
@@ -506,5 +515,14 @@ nav .fas {
         background-color: #262626;
         border-color: rgb(240, 16, 16);
         transition: background 0.5;
+    }
+    .fix_head{
+        margin-left: -20%;
+        border: #0b0b0b solid 10px;
+        background-color: #101010;
+        width: 150%;
+        height: 70px;
+        margin-top: -20px;
+        position: fixed;
     }
 }
