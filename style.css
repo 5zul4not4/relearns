@@ -516,6 +516,7 @@ nav .fas {
         display: flex;
         align-items: center;
         padding: 0px 10px 10px;
+        border-bottom: #fff solid 2px;
     }
 
     input{
