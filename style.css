@@ -492,36 +492,7 @@ nav .fas {
     .btn.btn4:active {
         background: #ff004f;
     }
-    .find{
-        margin-top: 80px;
-    }
-
-    #srch{
-        height: 50px;
-        width: 95%;
-        width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-    }
-
-    #find_btn{
-        height: 50px;
-        width: 50%;
-        margin-top: 10px;
-        margin-left: 22%;
-        color: white;
-        font-size: 20px;
-        border-radius: 20px ;
-        background-color: #262626;
-        border-color: rgb(240, 16, 16);
-        transition: background 0.5;
-    }
+    
     .fix_head{
         margin-left: -20%;
         border: #0b0b0b solid 10px;
@@ -531,4 +502,68 @@ nav .fas {
         margin-top: -20px;
         position: fixed;
     }
+
+    
+
+    .search-box{
+        width: 400px;
+        background: transparent;
+        margin: 100px auto 0;
+        
+    }
+
+    .rowsrch{
+        display: flex;
+        align-items: center;
+        padding: 0px 10px 10px;
+    }
+
+    input{
+        flex: 1;
+        height: 45px;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        font-size: 20px;
+        color: white;
+    }
+
+    button{
+        background: transparent;
+        outline: 0;
+        border: 0;
+    }
+
+    button .fa-solid{
+        width: 50px;
+        font-size: 25px;
+        color: white;
+    }
+    ::placeholder{
+        color: white;
+    }
+
+    .result-box ul{
+        border-top: 1px solid #fff;
+        padding: 15px 10px;
+    }
+    .result-box ul li{
+        list-style: none;
+        border-radius: 3px;
+        padding: 15px 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .result-box ul li:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .result-box{
+        max-height: 200px;
+        overflow: scroll;
+    }
+
+    
 }
