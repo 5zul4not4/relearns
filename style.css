@@ -499,9 +499,15 @@ nav .fas {
     #srch{
         height: 50px;
         width: 95%;
-        border-top: none;
-        font-size: 20px;
-        padding-left: 10px;
+        width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
     }
 
     #find_btn{
