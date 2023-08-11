@@ -132,7 +132,7 @@ height:40px;
 #firstName,#lastname{
 display:flex;
 flex-direction: column;
-width:50px;
+width:40px;
 } 
   
   
