@@ -124,5 +124,13 @@ form-group{
         text-align: center;
         font-size: 15px;
     }
-        
+
+input[type="checkbox"]{
+width:40px;
+height:40px;
+}
+   .name{
+display:flex;
+flex-direction: column;
+}     
 }
