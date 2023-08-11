@@ -131,7 +131,6 @@ height:40px;
 }
 
 #firstName, #lastname{
-display:flex;
 width:40%;
 }   
   
