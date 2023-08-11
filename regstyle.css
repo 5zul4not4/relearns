@@ -1,5 +1,5 @@
 body {
-background-image: url("images/background.png");
+background-image: url("images/backgroun.png");
 background-repeat:no-repeat;
 font-family: Arial, sans-serif;
 padding: 20px;
@@ -58,7 +58,7 @@ form-group{
         
         max-width: 100%;
         font-size: 40px;
-        color: white;
+        color: black;
         padding-left: 40px;
         line-height: 70px;
         margin: 20px 20px 20px 20px;
