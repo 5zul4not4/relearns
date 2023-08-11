@@ -16,10 +16,10 @@
         <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>
         <input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
       </div>  
-      <div class="form-group">
+      <div class="form-gender">
         <label>Gender:</label>
-        <label for="male"><input type="radio" id="gender" name="gender" value="Male">Male</label>
-        <label for="female"><input type="radio" id="gender" name="gender" value="Female">Female</label>
+        <input type="radio" id="gender" name="gender" value="Male">Male
+        <input type="radio" id="gender" name="gender" value="Female">Female
       </div>
       
       <div class="form-group">
@@ -73,11 +73,11 @@
         <label for="experience">Subject you can teach : </label>
         <input type="text" id="subject" name="subject" placeholder="Your preferable subject" required>
       </div>
-      <div class="form-group">
+      <div class="form-check">
         <label for="experience">Mode of teach : </label><br>
-        <input type="checkbox" id="mode1" name="mode" value="At Student's Home">At Student's Home<br>
-        <input type="checkbox" id="mode2" name="mode" value="At my place" >At Your Place<br>
-        <input type="checkbox" id="mode3" name="mode" value="Online" >Online(if you have webcam and internet)
+        <input type="checkbox" id="mode" name="mode" value="At Student's Home">At Student's Home<br>
+        <input type="checkbox" id="mode" name="mode" value="At my place" >At Your Place<br>
+        <input type="checkbox" id="mode" name="mode" value="Online" >Online(if you have webcam and internet)
       </div>
       <div class="form-group">
         <label for="address">Map Location:</label>
@@ -106,14 +106,19 @@
       </div>
       <div class="apply">
       <!-- Add other fields in a similar manner -->
-      <button type="submit">Apply</button>
-      <button type="reset">Cancel</button>
+      <input type="submit" value="Apply">
+      <input type="reset" value="Cancel">
       </div>
+      <div class="copyright">
+        <p>Copyright @ 2023 Relearns. All rights reserved.</p>
+    </div>
   </form>
+  
   <script>
     document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
 
+    
     // Get form values
     var firstName = document.getElementById("firstName").value;
     var lastName = document.getElementById("lastname").value;
@@ -127,9 +132,8 @@
     var experience = document.getElementById("experience").value;
     var interest = document.getElementById("interest").value;
     var subject = document.getElementById("subject").value;
-    var mode1 = document.getElementById("mode1").value;
-    var mode2 = document.getElementById("mode2").value;
-    var mode3 = document.getElementById("mode3").value;
+    var mode = document.getElementById("mode").value;
+
 
 
     // Create a new window to print the details
@@ -147,7 +151,7 @@
                   "<br><strong>Experience :</strong> " + experience +
                   "<br><strong>Class:</strong> " + interest +
                   "<br><strong>Subject:</strong> " + subject +
-                  "<br><strong>Mode of teaching :</strong> " + mode1+", " + mode2+", "+ mode3
+                  "<br><strong>Mode of teaching :</strong> " + mode
  
 
                   // Add other fields' values in a similar manner
