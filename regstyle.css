@@ -40,7 +40,6 @@ padding: 10px 10px 10px 10px;
 text-align: center;
 margin-top: 10px;
 width: 100px;
-
 border-color: red;
 border-radius: 10px ;
 background-color: transparent;
@@ -53,4 +52,17 @@ input{
 }
 form-group{
     border: rgb(223, 45, 45) solid 1px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    form{
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 50px;
+        margin: 20px 20px 20px 20px;
+    }
+    button{
+        border-color: rgb(20, 22, 170);
+    }
 }
