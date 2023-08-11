@@ -125,12 +125,15 @@ form-group{
         font-size: 15px;
     }
 
-input[type="checkbox"]{
+input[type="radio"]{
 width:40px;
 height:40px;
 }
-   .name{
+
+.name{
 display:flex;
 flex-direction: column;
-}     
+width:40%;
+}   
+  
 }
