@@ -132,7 +132,7 @@ height:40px;
 
 .name{
 display:flex;
-flex-direction: column;
+flex-direction: row;
 width:40%;
 }   
   
