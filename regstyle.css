@@ -1,5 +1,6 @@
 body {
 background-image: url("images/background.png");
+background-repeat:none;
 font-family: Arial, sans-serif;
 padding: 20px;
 width: 100%;
