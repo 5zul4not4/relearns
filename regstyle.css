@@ -1,0 +1,56 @@
+body {
+font-family: Arial, sans-serif;
+padding: 20px;
+width: 100%;
+}
+
+h2 {
+text-align: center;
+}
+
+form {
+display: flex;
+line-height: 20px;
+flex-direction: column;
+max-width: 300px;
+margin: 0 auto;
+border: black solid 2px;
+padding: 20px 20px 20px;
+}
+
+span{
+    color: red;
+}
+
+label {
+margin-top: 10px;
+}
+
+input textarea {
+padding: 5px;
+margin-top: 50px;
+}
+
+.apply{
+    text-align: center;
+}
+
+button {
+padding: 10px 10px 10px 10px;
+text-align: center;
+margin-top: 10px;
+width: 100px;
+
+border-color: red;
+border-radius: 10px ;
+background-color: transparent;
+}
+input{
+    border: none;
+    outline: none;
+    right: 0;
+    border-bottom: black dashed 0.5px;
+}
+form-group{
+    border: rgb(223, 45, 45) solid 1px;
+}
