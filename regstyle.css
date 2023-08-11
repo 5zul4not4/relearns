@@ -21,7 +21,7 @@ padding: 20px 20px 20px;
 }
 
 span{
-    color: red;
+    color: blue;
 }
 
 label {
@@ -132,11 +132,6 @@ font-size:20px;
 input[type="radio"]{
 width:40px;
 height:40px;
-}
-
-#lastname{
-width: 200px;
-margin-top:10px;
 }
 
   
