@@ -129,16 +129,10 @@ input[type="radio"]{
 width:40px;
 height:40px;
 }
-#firstName{
+#firstName,#lastname{
 display:flex;
 width:50%;
 } 
-
-#lastname{
-display:flex;
-width:50px;
-margin-left:10px;
-}  
   
   
 }
