@@ -53,7 +53,7 @@ form-group{
 @media only screen and (min-width: 600px) {
 
     form{
-        background-color: black;
+        background-image: url("image/background.png");
         max-width: 100%;
         font-size: 40px;
         color: white;
