@@ -108,6 +108,7 @@
       <!-- Add other fields in a similar manner -->
       <input type="submit" value="Apply">
       <input type="reset" value="Cancel">
+<input type="button" value="Print">
       </div>
       <div class="copyright">
         <p>Copyright @ 2023 Relearns. All rights reserved.</p>
@@ -135,7 +136,7 @@
     var mode = document.getElementById("mode").value;
 
 
-
+var print = getElementById("print")
     // Create a new window to print the details
     var printWindow = window.open('','_blank');
     // Generate the content for printing
@@ -152,7 +153,10 @@
                   "<br><strong>Class:</strong> " + interest +
                   "<br><strong>Subject:</strong> " + subject +
                   "<br><strong>Mode of teaching :</strong> " + mode
+
+
  
+print.printWindow.document.print();
 
                   // Add other fields' values in a similar manner
 
