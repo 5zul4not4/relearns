@@ -1,30 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>relearns</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="regstyle.css">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <div class="fix_head">  </div>
-            <nav>
-                
-                <a href="#"><img src="images/logo.png" class="logo"></img></a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times"></i>
-                </ul>
-                <i class="fas fa-bars"></i>
-            </nav>
-        </div>
-    </div>
-    <script src="script.js"></script></body>
+
+
+  </style>
+
+    <form id="registrationForm">
+      <h2>Teacher Registration Form</h2>
+      <div class="form-group">
+        <label for="firstName">Personal information <span>*</span></label><br>
+        <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
+      </div>  
+      <div class="form-group">
+        <label>Gender:</label>
+        <label for="male"><input type="radio" id="male" name="gender" value="Male">Male</label>
+        <label for="female"><input type="radio" id="female" name="gender" value="Female">Female</label>
+      </div>
+      
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob" placeholder="00-00-0000" maxlength="10" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99" placeholder="Age" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" placeholder="000-000-0000" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Tution center address:</label>
+        <input type="text" id="address" name="address" placeholder="Street/City/State" required>
+      </div><br>
+
+      
+
+      <label for="firstName">Educational Qualification <span>*</span></label>
+      <div class="form-group">
+        <label for="qualification">Qualification:</label>
+        <select id="qualification" name="qualification" required>
+          <option value="">Highest Education</option>
+          <option value="High School">High School</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="PhD">PhD</option>
+          <option value="PhD">Others</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="experience">Teaching Experience:</label>
+        <input type="number" id="experience" name="experience" placeholder="Number of years" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="experience">Class you can teach : </label>
+        <input type="text" id="interest" name="interest" placeholder="Class 1-12" min="1" max="12" required>
+      </div>
+      <div class="form-group">
+        <label for="experience">Subject you can teach : </label>
+        <input type="text" id="interest" name="interest" placeholder="Your preferable subject" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="experience">Mode of teach : </label><br>
+        <input type="checkbox" id="interest" name="interest"  required>At Student's Home<br>
+        <input type="checkbox" id="interest" name="interest"  required>At Your Place<br>
+        <input type="checkbox" id="interest" name="interest"  required>Online(if you have webcam and internet)
+      </div>
+      <div class="form-group">
+        <label for="address">Map Location:</label>
+        <input type="text" id="address" name="address" placeholder="Street/City/State" required>
+      </div><br>
+
+      <label for="firstName">Account<span>*</span></label>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label><input type="checkbox" required> I agree to the <a href="#">terms and conditions.</a></label>
+      </div>
+      <div class="form-group">
+        <textarea id="comment" name="comment" class="comment-box" placeholder="Additional Comments"></textarea>
+      </div>
+      <div class="apply">
+      <!-- Add other fields in a similar manner -->
+      <button type="submit">Apply</button>
+      <button type="reset">Cancel</button>
+      </div>
+  </form>
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get form values
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastname").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+    var firstName = document.getElementById("firstName").value;
+
+    // Create a new window to print the details
+    var printWindow = window.open('','');
+
+    // Generate the content for printing
+    var content = "<h2>Registration Details</h2>" +
+                  "<strong>First Name:</strong> " + firstName +
+                  "<br><strong>Last Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName +
+                  "<br><strong>First Name:</strong> " + lastName 
+                  // Add other fields' values in a similar manner
+
+    // Set the content and print the window
+    printWindow.document.open();
+    printWindow.document.write(content);
+    printWindow.document.close();
+    printWindow.print();
+
+    // Reset the form
+    document.getElementById("registrationForm").reset();
+});
+
+  </script>
+</body>
 </html>
