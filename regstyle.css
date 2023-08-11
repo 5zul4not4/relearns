@@ -130,9 +130,8 @@ width:40px;
 height:40px;
 }
 
-.name{
+#firstName, #lastname{
 display:flex;
-flex-direction: row;
 width:40%;
 }   
   
