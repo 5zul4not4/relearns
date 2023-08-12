@@ -39,7 +39,7 @@
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
       </div>
       <div class="form-group">
-        <label for="TuitionName">Govt. ID Proof(adhaar, Driving Licence, etc.,)</label>
+        <label id="adhar" for="TuitionName">Govt. ID Proof(adhaar, Driving Licence, etc.,)</label>
         <input type="file" id="centername" name="centername" placeholder="" required>
       </div><br>
        
@@ -112,7 +112,7 @@
     var interest = document.getElementById("interest").value;
     var subject = document.getElementById("subject").value;
     var mode = document.getElementById("mode").value;
-var map = document.getElementById("address").value;
+    var map = document.getElementById("address").value;
 
 
 
@@ -128,13 +128,10 @@ var map = document.getElementById("address").value;
                   "<br><strong>Email:</strong> " + email +
                   "<br><strong>Tuition Center:</strong> " + centerName +
                   "<br><strong>Tuition Address:</strong> " + centerAddress +
-"<a><br><strong>Location :</strong> " + map +"</a>"
                   "<br><strong>Education Qualification : </strong> " + qualification +
-                  "<br><strong>Experience :</strong> " + experience +
                   "<br><strong>Class:</strong> " + interest +
                   "<br><strong>Subject:</strong> " + subject +
-                  "<br><strong>Mode of teaching :</strong> " + mode +
-"<br><strong><input type='button' onclick='window.print()' value='Print'></strong> "
+                  "<br><strong><input type='button' onclick='window.print()' value='Print'></strong> "
 
                   // Add other fields' values in a similar manner
 
