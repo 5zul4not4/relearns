@@ -38,9 +38,9 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
       </div>
-      <div class="form-group">
-        <label id="adhar" for="TuitionName"></label>
-        <input type="file" id="centername" name="centername" placeholder="Govt. ID Proof(adhaar, Driving Licence, etc.,). <br>File size upto 2MB (.pdf) " required>
+      <div class="form-adhar">
+        <label id="adhar" for="TuitionName">ID Proof(adhaar, Driving Licence, etc.,) File size upto 1MB (.pdf) </label>
+        <input type="file" id="fileInput" name="file" placeholder="" accept="application/pdf"  required >
       </div><br>
        
 
@@ -92,7 +92,18 @@
         <p>Copyright @ 2023 Relearns. All rights reserved.</p>
     </div>
   </form>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      var fileInput = document.getElementById('fileInput');
+      var fileSize = fileInput.files[0].size; // Get the file size in bytes
+      var maxSize = 1048576; // Define the maximum allowed file size in bytes (e.g., 1MB)
   
+      if (fileSize > maxSize) {
+        event.preventDefault(); // Prevent form submission
+        alert('File size exceeds the limit. Please choose a smaller file.');
+      }
+    });
+  </script>
   <script>
     document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
