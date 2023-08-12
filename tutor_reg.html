@@ -9,7 +9,7 @@
 
   </style>
 
-    <form id="registrationForm">
+    <form id="registrationForm" action="send_confirmation.php" method="post">
       <h2>Teacher Registration Form</h2>
       <div class="name">
         <label for="firstName">Personal information <span>*</span></label><br>
@@ -92,42 +92,7 @@
       </div>
 
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    
-    // Generate a confirmation token (you would need your own logic for this)
-    $confirmation_token = generateToken();
 
-    // Send confirmation email
-    $to = $email;
-    $subject = "Confirmation Email";
-    $message = "Click the link below to confirm your registration:\n";
-    $message .= "http://yourwebsite.com/confirm.php?token=$confirmation_token";
-    $headers = "From: your@email.com";
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Confirmation email sent. Please check your inbox.";
-    } else {
-        echo "Failed to send confirmation email.";
-    }
-}
-?>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["token"])) {
-    $token = $_GET["token"];
-    
-    // Verify the token and mark user as confirmed in the database
-    if (verifyToken($token)) {
-        echo "Registration confirmed! You can now log in.";
-    } else {
-        echo "Invalid token.";
-    }
-} else {
-    echo "Invalid request.";
-}
-?>
       <div id="termsModal" class="modal">
         <div class="modal-content">
           <h2>Terms and Conditions</h2>
