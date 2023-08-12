@@ -180,7 +180,7 @@ form-group{
       .modal-content {
         background-color: #fefefe;
         margin: 50% auto;
-        max-height: 800px;
+        max-height: 1000px;
         text-align: left;
         font-size: 30px;
         padding: 20px;
@@ -201,13 +201,14 @@ form-group{
         font-size: 50px;
         margin-right: 30px;
         color: black ;
-        border: rgb(246, 12, 12) solid 10px;
+        border: blue solid 2px;
         border-radius: 10px;
         background-color: transparent;
       }
 
       #terms{
-        color: blue;
+        border: 1px solid grey;
+        color: black;
         font-size: 30px;
         text-align: left;
       }
