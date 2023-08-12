@@ -21,7 +21,7 @@ padding: 20px 20px 20px;
 }
 
 span{
-    color: blue;
+    color: yellow;
 }
 
 label {
@@ -62,7 +62,7 @@ form-group{
         padding-left: 40px;
         line-height: 70px;
         margin: 20px 20px 20px 20px;
-        
+    
     }
     input[type="submit"],[type="reset"]{
         width: 410px;
