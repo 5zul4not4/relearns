@@ -144,7 +144,12 @@ form-group{
         line-height: 120px;
     }
     #qualification{
-        background-color: transperant;
+        background-color: transparent;
         padding: 10px;
+        font-style: italic;
+    }
+
+    #adhar{
+        font-size:40px;
     }
 }
