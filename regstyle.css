@@ -114,8 +114,8 @@ form-group{
             background-color: #1E90FF;
         }
     .comment-box {
-margin-top:10px;
-margin-bottom:10px;
+        margin-top:10px;
+        margin-bottom:10px;
         width: 95%;
         height: 100px;
     }
@@ -131,22 +131,21 @@ margin-bottom:10px;
         font-size: 15px;
     }
 
-:: placeholder {
-font-size:15px;
-}
+    :: placeholder {
+    font-size:15px;
+    }
 
-input[type="radio"]{
-width:40px;
-height:40px;
-}
+    input[type="radio"]{
+    width:40px;
+    height:40px;
+    }
 
-#firstName,#lastname{
-width:42%;
-height: 50px;
-}
+    #firstName,#lastname{
+    width:42%;
+    height: 50px;
+    }
     #qualification{
-width: 200px;
-   
-}
+    width: 200px;   
+    }
 
 }
