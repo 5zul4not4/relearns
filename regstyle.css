@@ -143,5 +143,8 @@ form-group{
     {
         line-height: 120px;
     }
-        
+    #qualification{
+        background-color: transperant;
+        padding: 10px;
+    }
 }
