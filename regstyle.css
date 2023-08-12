@@ -1,6 +1,4 @@
 body {
-background-image: url("images/backgroun.png");
-background-repeat:no-repeat;
 font-family: Arial, sans-serif;
 padding: 20px;
 width: 100%;
@@ -12,7 +10,7 @@ text-align: center;
 
 form {
 display: flex;
-line-height: 23px;
+line-height: 20px;
 flex-direction: column;
 max-width: 100%;
 margin: 0 auto;
@@ -33,24 +31,12 @@ margin-top: 10px;
     text-align: center;
 }
 
-button {
-padding: 10px 10px 10px 10px;
-text-align: center;
-margin-top: 10px;
-width: 100px;
-border-color: red;
-border-radius: 10px ;
-background-color: transparent;
-}
-
 input{
     border: none;
     outline: none;
-line-height:10px;
     right: 0;
     border-bottom: black dashed 0.5px;
 }
-
 form-group{
     border: rgb(223, 45, 45) solid 1px;
 }
@@ -58,34 +44,39 @@ form-group{
 @media only screen and (min-width: 600px) {
 
     form{
-        
+        background-color: white;
         max-width: 100%;
         font-size: 40px;
         color: black;
         padding-left: 40px;
-        line-height: 70px;
+        line-height: 90px;
         margin: 20px 20px 20px 20px;
-    
+        
     }
-    
-    input[type="submit"],[type="reset"]{
-        width: 410px;
-        height: 70px;
-        font-size: 50;
-        margin-right: 20px;
-        color: rgb(251, 251, 252) ;
-        border-color: rgb(20, 22, 170);
-        background-color: rgb(230, 36, 36);
+    input[type="submit"], input[type="reset"]{
+        width: 400px;
+        height: 45%;
+        font-size: 50px;
+        margin-right: 30px;
+        color: black ;
+        border: rgb(246, 12, 12) solid 10px;
+        border-radius: 10px;
     }
+    input[type="submit"]:hover, input[type="reset"]:hover{
+        color: white ;
+        background-color: black;
+        border: black solid 10px;
+        border-radius: 10px
+    }
+
     a{
         color: #1E90FF;
+        font-size: 45px;
+        text-decoration: none;
     }
-    .apply{
-        color: aquamarine;
-        font-size: 50px;
-    }
+  
     label {
-        margin-top: 10px;
+        
         font-size: 50px;
         font-family: Arial, Helvetica, sans-serif;
         }
@@ -93,15 +84,16 @@ form-group{
     input{
         font-size: 50px;
         background-color: transparent;
-        border-bottom: rgb(226, 92, 20) solid 2px;
-        width: 95%;
+        border: rgb(226, 92, 20) solid 2px;
+        width: 90%;
+        padding: 40px 30px 30px;
         color: black;
         }
-    input[type="checkbox"] {
-    
+    input[type="checkbox"], input[type="radio"] {
+            margin-right: 20px ;
             width: 50px;
             height: 50px;
-            border: 2px solid blue;
+            border: 2px solid #0c33df;
             border-radius: 4px;
             outline: none;
             transition: border-color 0.3s;
@@ -114,38 +106,42 @@ form-group{
             background-color: #1E90FF;
         }
     .comment-box {
-        margin-top:10px;
-        margin-bottom:10px;
         width: 95%;
-        height: 100px;
+        height: 200px;
+        font-size: 25px;
+        border: rgb(226, 92, 20) solid 2px;
+        
     }
 
     .form-gender{
         font-size: 50px;
         line-height: 30px;
-        margin: 40px 0px;
+        margin: 40px 10px 40px;
     }
+
+   
 
     p{
         text-align: center;
         font-size: 15px;
     }
 
-    :: placeholder {
-    font-size:15px;
-    }
-
-    input[type="radio"]{
-    width:40px;
-    height:40px;
-    }
-
     #firstName,#lastname{
-    width:42%;
-    height: 50px;
-    }
-    #qualification{
-    width: 200px;   
+        width: 41%;
+        height: 45%;
+        padding: 40px 30px 30px;
     }
 
+    select{
+        width: 97%;
+        height:130px;
+        font-size: 50px;
+        border: none;
+        border: rgb(226, 92, 20) solid 2px;
+    }
+    .form-group
+    {
+        line-height: 120px;
+    }
+        
 }
