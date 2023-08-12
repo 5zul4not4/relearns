@@ -42,12 +42,14 @@ border-color: red;
 border-radius: 10px ;
 background-color: transparent;
 }
+
 input{
     border: none;
     outline: none;
     right: 0;
     border-bottom: black dashed 0.5px;
 }
+
 form-group{
     border: rgb(223, 45, 45) solid 1px;
 }
@@ -64,6 +66,7 @@ form-group{
         margin: 20px 20px 20px 20px;
     
     }
+    
     input[type="submit"],[type="reset"]{
         width: 410px;
         height: 70px;
@@ -133,8 +136,5 @@ input[type="radio"]{
 width:40px;
 height:40px;
 }
-span{
-    color: yellow;
-}
-  
+
 }
