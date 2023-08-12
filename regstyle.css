@@ -12,7 +12,7 @@ text-align: center;
 
 form {
 display: flex;
-line-height: 20px;
+line-height: 23px;
 flex-direction: column;
 max-width: 100%;
 margin: 0 auto;
@@ -21,7 +21,7 @@ padding: 20px 20px 20px;
 }
 
 span{
-    color: yellow;
+    color: red;
 }
 
 label {
@@ -46,6 +46,7 @@ background-color: transparent;
 input{
     border: none;
     outline: none;
+line-height:10px;
     right: 0;
     border-bottom: black dashed 0.5px;
 }
@@ -113,6 +114,8 @@ form-group{
             background-color: #1E90FF;
         }
     .comment-box {
+margin-top:10px;
+margin-bottom:10px;
         width: 95%;
         height: 100px;
     }
@@ -129,12 +132,16 @@ form-group{
     }
 
 :: placeholder {
-font-size:20px;
+font-size:15px;
 }
 
 input[type="radio"]{
 width:40px;
 height:40px;
+}
+
+#firstName,#lastname{
+width:40px;
 }
 
 }
