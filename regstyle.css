@@ -150,13 +150,14 @@ form-group{
     }
 
     #adhar{
-        font-size:40px;
+        font-size:43px;
     }
         .form-adhar{
         margin-top: 25px;
         border: #e25c14 solid 2px;
         padding: 20px;
         text-align: center;
+        width: 93%;
     }
 
     input[type="file"]{
