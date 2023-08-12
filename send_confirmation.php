@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = $email;
     $subject = "Confirmation Email";
     $message = "Click the link below to confirm your registration:\n";
-    $message .= "https://relearns.vercel.app/confirm.php?token=$confirmation_token";
+    $message .= "https://5zul.000webhostapp.com/confirm.php?token=$confirmation_token";
     $headers = "From: faizulha2003@gmail.com";
 
     if (mail($to, $subject, $message, $headers)) {
