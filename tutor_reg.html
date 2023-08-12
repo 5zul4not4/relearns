@@ -84,12 +84,57 @@
       <div class="form-group">
         <label><input type="checkbox" required> I agree to the <a href="#">terms and conditions.</a></label>
       </div>
+        
       <div class="apply">
       <!-- Add other fields in a similar manner -->
-      <input type="submit" value="Apply">
+      <input type="submit" value="Apply" onclick="openTermsAndConditions(event)">
       <input type="reset" value="Cancel">
-      
       </div>
+        
+      <div id="termsModal" class="modal">
+        <div class="modal-content">
+          <h2>Terms and Conditions</h2>
+          <p id="terms">
+
+            1. Teacher Responsibility: <br>
+               a. The teacher agrees to provide effective and quality home tuition services to the students. <br>
+               b. The teacher is responsible for preparing suitable lesson plans, teaching materials, and assignments. <br>
+               c. The teacher should maintain a professional and respectful attitude towards the students and their families. <br>
+               d. The teacher must adapt teaching methods according to the individual needs and abilities of each student. <br>
+            
+            2. Payment Terms: <br>
+               a. The teacher will receive a salary for the provided home tuition services as agreed upon. <br>
+               b. The teacher will pay 50% of their first month's salary as a deposit in order to secure their position. <br>
+               c. The remaining 50% of the first month's salary will be paid by the hiring party after the successful completion of the first month. <br>
+            
+            3. Schedule and Attendance: <br>
+               a. The teacher must adhere to the agreed-upon schedule for home tuition sessions. <br>
+               b. In case of any change in the schedule, the teacher must inform the hiring party in advance and seek mutual agreement. <br>
+               c. The teacher should maintain punctuality and regular attendance for all the scheduled sessions. <br>
+            
+            4. Termination:<br>
+               a. Either party can terminate the agreement with a prior notice period of [X] days, as agreed upon in writing.<br>
+               b. In case of any breach of the terms and conditions, either party has the right to terminate the agreement immediately.<br>
+            
+            5. Confidentiality:<br>
+               a. The teacher must respect the privacy and confidentiality of the hiring party and the students.<br>
+               b. Any information shared during the course of home tuition should be kept confidential and not disclosed to any third party.<br>
+               c. The teacher should not share any personal information about the students or their families without prior consent.<br>
+            
+            6. Dispute Resolution:<br>
+               a. In case of any disputes or conflicts arising between the hiring party and the teacher, both parties should seek an amicable resolution through communication and negotiation.<br>
+               b. If resolution cannot be reached, either party may seek legal channels for dispute resolution.<br><br>
+            
+            By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.</p>
+          <!-- Add your terms and conditions here -->
+      
+          <div class="buttons">
+            <button onclick="acceptTerms()">Accept</button>
+            <button onclick="declineTerms()">Decline</button>
+          </div>
+        </div>
+      </div>
+      
       <div class="copyright">
         <p>Copyright @ 2023 Relearns. All rights reserved.</p>
     </div>
@@ -105,6 +150,22 @@
         alert('File size exceeds the limit. Please choose a smaller file.');
       }
     });
+
+function openTermsAndConditions(event) {
+  event.preventDefault();
+  document.getElementById('termsModal').style.display = 'block';
+}
+
+function acceptTerms() {
+  document.getElementById('termsModal').style.display = 'none';
+  document.getElementById('myForm').submit();
+}
+
+function declineTerms() {
+  document.getElementById('termsModal').style.display = 'none';
+  alert('You must accept the terms and conditions to submit the form.');
+}
+      
   </script>
   <script>
     document.getElementById("registrationForm").addEventListener("submit", function(event) {
