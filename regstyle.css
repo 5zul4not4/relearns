@@ -141,7 +141,8 @@ height:40px;
 }
 
 #firstName,#lastname{
-width:40px;
+width:42%;
+height: 50px;
 }
 
 }
