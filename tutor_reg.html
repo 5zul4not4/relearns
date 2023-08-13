@@ -9,7 +9,7 @@
 
   </style>
 
-    <form action="send_confirmation.php" method="post">
+    <form id="registrationForm" action="" method="post">
       <h2>Teacher Registration Form</h2>
       <div class="name">
         <label for="firstName">Personal information <span>*</span></label><br>
@@ -87,7 +87,7 @@
         
       <div class="apply">
       <!-- Add other fields in a similar manner -->
-      <input type="submit" value="Apply">
+      <input type="submit" value="Apply"onclickk="openTermsAndConditions(event)"; >
       <input type="reset" value="cancel" onclick="window.location.href='https://relearns.vercel.app/index.html';">
       </div>
 
