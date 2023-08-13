@@ -1,31 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>relearns</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="regstyle.css">
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <div class="fix_head">  </div>
-            <nav>
-                
-                <a href="#"><img src="images/logo.png" class="logo"></img></a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times"></i>
-                </ul>
-                <i class="fas fa-bars"></i>
-            </nav>
+
+
+  </style>
+
+    <form id="registrationForm" action="" method="post">
+      <h2>Teacher Registration Form</h2>
+      <div class="name">
+        <label for="firstName">Personal information <span>*</span></label><br>
+        <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>
+        <input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
+      </div>  
+      <div class="form-gender">
+        <label>Gender:</label>
+        <input type="radio" id="gender" name="gender" value="Male">Male
+        <input type="radio" id="gender" name="gender" value="Female">Female
+      </div>
+      
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="number" id="dob" name="dob" placeholder="00-00-0000" maxlength="10" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99" placeholder="Enter your age" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" placeholder="000-000-0000" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+      </div>
+      <div class="form-adhar">
+          <center>
+        <label id="adhar" for="TuitionName">ID Proof(adhaar, Driving Licence, etc.,) <br>File size upto 1MB (.pdf) </label>
+        <input type="file" id="fileInput" name="file" placeholder="" accept=".pdf"  required >
+          </center>
+      </div><br>
+       
+
+      <label for="firstName">Educational Qualification <span>*</span></label>
+      <div class="form-group">
+        <label for="qualification">Qualification:</label>
+        <select id="qualification" name="qualification" required>
+          <option disabled selected value> --Select Highest Qualification-- </option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="PhD">PhD</option>
+          <option value="PhD">Others</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="interset">Class you can teach : </label>
+        <input type="number" id="interest" name="interest" placeholder="Class 1-12th" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject you can teach : </label>
+        <input type="text" id="subject" name="subject" placeholder="Your preferable subject" required>
+      </div>
+
+      <label for="account">Account<span>*</span></label>
+
+      <div class="form-group">
+        <div class="rowsrch">
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <a id="show" onclick="switchVisibility()"><i class="fa-solid fa-eye"></i></a>
+      </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <div class="rowsrch">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+      </div>
+      </div>
+        
+      <div class="form-group">
+        <label><input type="checkbox" onclick="checkpass()" id="check" required> I agree to the <a onclick="openTermsAndConditions(event)">terms and conditions.</a></label>
+      </div>
+        
+      <div class="apply">
+      <!-- Add other fields in a similar manner -->
+      <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
+      <input type="button" value="cancel" onclick="window.location.href='https://relearns.vercel.app/index.html';">
+      </div>
+
+      <div id="termsModal" class="modal">
+        <div class="modal-content">
+          <h2>Terms and Conditions</h2>
+          <p id="terms">
+
+            1. Teacher Responsibility: <br>
+               a. The teacher agrees to provide effective and quality home tuition services to the students. <br>
+               b. The teacher is responsible for preparing suitable lesson plans, teaching materials, and assignments. <br>
+               c. The teacher should maintain a professional and respectful attitude towards the students and their families. <br>
+               d. The teacher must adapt teaching methods according to the individual needs and abilities of each student. <br>
+            
+            2. Payment Terms: <br>
+               a. The teacher will receive a salary for the provided home tuition services as agreed upon. <br>
+               b. The teacher will pay 50% of their first month's salary as a deposit in order to secure their position. <br>
+               c. The remaining 50% of the first month's salary will be paid by the hiring party after the successful completion of the first month. <br>
+            
+            3. Schedule and Attendance: <br>
+               a. The teacher must adhere to the agreed-upon schedule for home tuition sessions. <br>
+               b. In case of any change in the schedule, the teacher must inform the hiring party in advance and seek mutual agreement. <br>
+               c. The teacher should maintain punctuality and regular attendance for all the scheduled sessions. <br>
+            
+            4. Termination:<br>
+               a. Either party can terminate the agreement with a prior notice period of [X] days, as agreed upon in writing.<br>
+               b. In case of any breach of the terms and conditions, either party has the right to terminate the agreement immediately.<br>
+            
+            5. Confidentiality:<br>
+               a. The teacher must respect the privacy and confidentiality of the hiring party and the students.<br>
+               b. Any information shared during the course of home tuition should be kept confidential and not disclosed to any third party.<br>
+               c. The teacher should not share any personal information about the students or their families without prior consent.<br>
+            
+            6. Dispute Resolution:<br>
+               a. In case of any disputes or conflicts arising between the hiring party and the teacher, both parties should seek an amicable resolution through communication and negotiation.<br>
+               b. If resolution cannot be reached, either party may seek legal channels for dispute resolution.<br><br>
+            
+            By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.</p>
+          <!-- Add your terms and conditions here -->
+      
+          <div class="buttons">
+          <input type="submit" onclick="acceptTerms()" value="Accept">
+          <button onclick="declineTerms()">Decline</button>
+          </div>
         </div>
+      </div>
+      
+      <div class="copyright">
+        <p>Copyright @ 2023 Relearns. All rights reserved.</p>
     </div>
-    <script src="script.js"></script>
+  </form>
+  <script>
+const pass=document.querySelector("#password");
+const pass2=document.querySelector("#confirmPassword");
+const checkbox=document.querySelector("#check");
+function switchVisibility(){
+  if(pass.getAttribute("type")==="password")
+    pass.setAttribute("type","text");
+  else
+    pass.setAttribute("type","password");
+}
+
+function checkpass(){
+    if(pass.value===pass2.value){
+    }
+    else
+    {
+    checkbox.checked=false;
+    alert('Password does not match!');
+    }
+}
+
+
+
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+      var fileInput = document.getElementById('fileInput');
+      var fileSize = fileInput.files[0].size; // Get the file size in bytes
+      var maxSize = 1048576; // Define the maximum allowed file size in bytes (e.g., 1MB)
+  
+      if (fileSize > maxSize) {
+        event.preventDefault(); // Prevent form submission
+        alert('File size exceeds the limit. Please choose a smaller file.');
+      }
+    });
+
+function openTermsAndConditions(event) {
+  event.preventDefault();
+  document.getElementById('termsModal').style.display = 'block';
+}
+
+function acceptTerms() {
+  document.getElementById('termsModal').style.display = 'none';
+  document.getElementById('myForm').submit();
+}
+
+function declineTerms() {
+  document.getElementById('termsModal').style.display = 'none';
+  alert('You must accept the terms and conditions to submit the form.');
+}
+
+  </script>
+ <!-- <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    
+    // Get form values
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastname").value;
+    var gender = document.getElementById("gender").value;
+    var age = document.getElementById("age").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var centerName = document.getElementById("centername").value;
+    var centerAddress = document.getElementById("centeraddress").value;
+    var qualification = document.getElementById("qualification").value;
+    var experience = document.getElementById("experience").value;
+    var interest = document.getElementById("interest").value;
+    var subject = document.getElementById("subject").value;
+    var mode = document.getElementById("mode").value;
+    var map = document.getElementById("address").value;
+
+
+
+
+    // Create a new window to print the details
+    var printWindow = window.open('','Form');
+    // Generate the content for printing
+    var content = "<h2>Registration Details</h2>" +
+                  "<strong>Tutor Name:</strong> " + firstName +" " +lastName+
+                  "<br><strong>Gender:</strong> " + gender +
+                  "<br><strong>Age:</strong> " + age +
+                  "<br><strong>Contact:</strong> " + phone +
+                  "<br><strong>Email:</strong> " + email +
+                  "<br><strong>Tuition Center:</strong> " + centerName +
+                  "<br><strong>Tuition Address:</strong> " + centerAddress +
+                  "<br><strong>Education Qualification : </strong> " + qualification +
+                  "<br><strong>Class:</strong> " + interest +
+                  "<br><strong>Subject:</strong> " + subject +
+                  "<br><strong><input type='button' onclick='window.print()' value='Print'></strong> "
+
+                  // Add other fields' values in a similar manner
+
+    // Set the content and print the window
+    printWindow.document.open();
+    printWindow.document.write(content);
+    printWindow.document.close();
+    
+
+    // Reset the form
+    document.getElementById("registrationForm");
+});
+
+  </script>-->
 </body>
 </html>
