@@ -49,6 +49,7 @@ form-group{
         font-size: 40px;
         color: black;
         padding-left: 40px;
+        border: none;
         line-height: 90px;
         margin: 20px 20px 20px 20px;
         
@@ -210,6 +211,7 @@ form-group{
         border: 1px solid grey;
         color: black;
         font-size: 30px;
+          padding-left:10px;
         text-align: left;
       }
 }
