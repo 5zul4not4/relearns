@@ -42,6 +42,73 @@ form-group{
 
 @media only screen and (min-width: 600px) {
 
+        .logo{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    nav{
+        position: relative;
+    }
+
+    /* Show the navigation menu on small screens */
+    nav ul {
+        display: block;
+        
+    }
+
+    nav .fas {
+        
+        display: block;
+        font-size: 50px;
+        top: 0;
+        right: 0;
+        color: #eeeded;
+        margin-right: 30px;
+        position: fixed;
+        margin-top: 20px;
+    }
+    nav .fa-times{
+        margin-top: 67.5%;
+        margin-right: 20%;
+        color: rgb(215, 50, 50);
+    }
+
+    nav ul {
+        background: #eeeded;
+        position: fixed;
+        top: -15px;
+        width: 50%;
+        /* Increased the width to accommodate the menu items */
+        right: 0;
+        height: 50vh;
+        transform: translateX(100%);
+        /* Off-canvas menu, initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show {
+        transform: translateX(0);
+        /* Show the menu when 'show' class is applied */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px;
+        padding-top: 40px;
+    }
+    nav ul li a{
+        color: rgb(184, 92, 92);
+    }
+    .fix_head{
+        margin-left: -20%;
+        background-color: #101010;
+        top: 0;
+        width: 140%;
+        height:110px;
+        position: fixed;
+    }
+
     form{
         background-color: white;
         max-width: 100%;
