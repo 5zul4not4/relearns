@@ -69,8 +69,7 @@ form-group{
         margin-top: 20px;
     }
     nav .fa-times{
-        margin-top: 67.5%;
-        margin-right: 20%;
+        margin-top: 67%;
         color: rgb(215, 50, 50);
     }
 
@@ -81,7 +80,7 @@ form-group{
         width: 50%;
         /* Increased the width to accommodate the menu items */
         right: 0;
-        height: 50vh;
+        height: 48vh;
         transform: translateX(100%);
         /* Off-canvas menu, initially hidden */
         transition: transform 0.3s ease-in-out;
@@ -298,5 +297,14 @@ form-group{
         padding: 0px 10px 0px;
         border: #e25c14 solid 2px;
         width: 94%;
+    }
+    #decline{
+        width: 400px;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 20px;
+        color: rgb(250, 246, 246) ;
+        border-radius: 50px;
+        background-color: rgb(191, 38, 38);
     }
 }
