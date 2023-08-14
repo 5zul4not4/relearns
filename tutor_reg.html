@@ -12,7 +12,7 @@
 <div class="container">
     <div class="fix_head"></div>
 
-    <nav id="navbar">
+    <nav class="navbar">
         
         <a href="#"><img src="images/logo.png" class="logo"></img></a>
         <ul >
@@ -47,7 +47,7 @@
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="18" max="99" placeholder="Enter your age" required>
+        <input type="number" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number:</label>
@@ -167,7 +167,8 @@ const navbar = document.querySelector('.navbar'); document.querySelector('.fas.f
 
         document.addEventListener('click', (event) => {
             if(!navbar.contains(event.target)){
-                document.querySelector('nav ul').classList.remove('show');
+navbar.classList.remove('show');
+document.querySelector('nav ul').classList.remove('show');
             }
         });
 
@@ -222,7 +223,7 @@ function acceptTerms() {
 function declineTerms() {
   document.getElementById('termsModal').style.display = 'none';
   alert('You must accept the terms and conditions to submit the form.');
-document.getElementById('myForm').reset();
+document.getElementById('registrationForm').reset();
 }
 
   </script>
