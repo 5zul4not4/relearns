@@ -18,10 +18,11 @@
         <ul >
           
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="parents_reg.html">Parents Signup</a></li>
+            <li><a href="students_reg.html">Students Signup</a></li>
+            <li><a href="tutuor_in.html">Teachers Login</a></li>
+            <li><a href="faq">Help & Support</a></li>
+            <li><a href="about.html">About</a></li>
             <i class="fas fa-times"></i>
         </ul>
         <i class="fas fa-bars"></i>
@@ -29,7 +30,7 @@
 </div>
 
     <form id="registrationForm" action="https://5zul.000webhostapp.com/upload.php" method="post">
-      <h2>Teacher Registration Form</h2>
+      <h2>Teachers Registration Form</h2>
       <div class="name">
         <label for="firstName">Personal information <span>*</span></label><br>
         <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>
@@ -47,7 +48,7 @@
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
+        <input type="tel" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number:</label>
@@ -108,7 +109,7 @@
       <div class="apply">
       <!-- Add other fields in a similar manner -->
       <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
-      <input type="button" value="cancel" onclick="window.location.href='https://relearns.vercel.app/index.html';">
+      <input type="button" value="Cancel" onclick="window.location.href='https://relearns.vercel.app/index.html';">
       </div>
 
       <div id="termsModal" class="modal">
@@ -150,7 +151,8 @@
       
           <div class="buttons">
           <input type="submit" onclick="acceptTerms()" value="Accept">
-          <button onclick="declineTerms()">Decline</button>
+          <span id="decline" onclick="declineTerms()">Decline</span>
+
           </div>
         </div>
       </div>
@@ -203,10 +205,20 @@ function checkpass(){
       var fileInput = document.getElementById('fileInput');
       var fileSize = fileInput.files[0].size; // Get the file size in bytes
       var maxSize = 1048576; // Define the maximum allowed file size in bytes (e.g., 1MB)
-  
+      var age = document.getElementById('age');
       if (fileSize > maxSize) {
         event.preventDefault(); // Prevent form submission
         alert('File size exceeds the limit. Please choose a smaller file.');
+      }
+       else if(pass.value!==pass2.value){
+        event.preventDefault();
+        alert("Password doesn't match!");
+       else if(age.value<18){
+        event.preventDefault();
+        alert("Your age is not qualified!");
+        }
+        else
+        document.getElementById('myForm').submit();
       }
     });
 
@@ -223,7 +235,6 @@ function acceptTerms() {
 function declineTerms() {
   document.getElementById('termsModal').style.display = 'none';
   alert('You must accept the terms and conditions to submit the form.');
-document.getElementById('registrationForm').reset();
 }
 
   </script>
