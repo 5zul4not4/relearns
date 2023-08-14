@@ -12,7 +12,7 @@
 <div class="container">
     <div class="fix_head"></div>
 
-    <nav class="navbar">
+    <nav id="navbar">
         
         <a href="#"><img src="images/logo.png" class="logo"></img></a>
         <ul >
@@ -161,7 +161,7 @@
   </form>
   <script>
       
-        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+const navbar = documen.querySelector(”.navbar”); document.querySelector('.fas.fa-bars').addEventListener('click', function () {
             document.querySelector('nav ul').classList.toggle('show');
         });
 
