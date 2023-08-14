@@ -141,20 +141,11 @@
                b. If resolution cannot be reached, either party may seek legal channels for dispute resolution.<br><br>
             
             By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.
-          </p><br>
-          <!-- Add your terms and conditions here -->
+          </p>
           <center>
-          <i class="fas fa-times" onclick="readTerms()"> close</i>
-          </center>
-
+          <i class="fas fa-times" onclick="readTerms()"> close</i></center>
+          <!-- Add your terms and conditions here -->
       </div>
-      </div>
-
-        
-      <div class="apply">
-      <!-- Add other fields in a similar manner -->
-      <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
-      <input type="button" value="Cancel" onclick="window.location.href='https://relearns.vercel.app/index.html';">
       </div>
 
       <div id="termsModal" class="modal">
@@ -191,8 +182,10 @@
                a. In case of any disputes or conflicts arising between the hiring party and the teacher, both parties should seek an amicable resolution through communication and negotiation.<br>
                b. If resolution cannot be reached, either party may seek legal channels for dispute resolution.<br><br>
             
-            By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.</p>
+            By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.
+          </p>
           <!-- Add your terms and conditions here -->
+
       
           <div class="buttons">
           <input type="submit" onclick="acceptTerms()" value="Accept">
@@ -258,11 +251,12 @@ function checkpass(){
        else if(pass.value!==pass2.value){
         event.preventDefault();
         alert("Password doesn't match!");
+       }
        else if(age.value<18){
         event.preventDefault();
         alert("Your age is not qualified!");
         }
-        else
+       else
         document.getElementById('myForm').submit();
     });
 
