@@ -106,6 +106,12 @@
         <label><input type="checkbox" onclick="checkpass()" id="check" required> I agree to the <a onclick="termsAndConditions(event)">terms and conditions.</a></label>
       </div>
 
+        <div class="apply">
+      <!-- Add other fields in a similar manner -->
+      <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
+      <input type="button" value="Cancel" onclick="window.history.back()";>
+      </div>
+
         <div id="termstyle" class="modal">
         <div class="modal-content">
           <h2>Terms and Conditions</h2>
@@ -190,7 +196,6 @@
           <div class="buttons">
           <input type="submit" onclick="acceptTerms()" value="Accept">
           <span id="decline" onclick="declineTerms()">Decline</span>
-
           </div>
         </div>
       </div>
