@@ -125,14 +125,14 @@ form-group{
         font-size: 50px;
         margin-right: 30px;
         color: white ;
-        background-color: red;
+        background-color: : rgb(250, 246, 246);
         border-radius: 40px;
     }
     input[type="button"]:hover, input[type="submit"]:hover{
         color: white ;
         background-color: grey;
-        border: black solid 20px;
-        border-radius: 10px
+        border: none;
+        border-radius: 40px
     }
 
     a{
@@ -263,10 +263,10 @@ form-group{
         width: 400px;
         font-size: 50px;
         margin-right: 30px;
-        color: black ;
-        border: blue solid 5px;
+        color: white;
+        border: none;
         border-radius: 10px;
-        background-color: transparent;
+        background-color: : rgb(250, 246, 246);
       }
 
       #terms{
