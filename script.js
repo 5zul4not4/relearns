@@ -7,8 +7,6 @@ const navbar = document.querySelector('.navbar');
 const menuList = document.querySelector('nav ul');
 const fixedHeader = document.querySelector('.fix_head');
 
-let prevScrollY = window.scrollY;
-let isMenuVisible = true; // Track if the menu is visible or not
 
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
@@ -23,22 +21,22 @@ document.addEventListener('click', (event) => {
 });
 
 // Auto-hide navigation menu on scroll
+let prevScrollY = window.scrollY;
+let isMenuVisible = true;
+
 window.addEventListener('scroll', function() {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > prevScrollY && isMenuVisible) {
         navbar.classList.add('hidden');
-        fixedHeader.style.marginTop = '0'; // Adjust the margin
         isMenuVisible = false;
     } else if (currentScrollY <= prevScrollY && !isMenuVisible) {
         navbar.classList.remove('hidden');
-        fixedHeader.style.marginTop = '110px'; // Adjust the margin
         isMenuVisible = true;
     }
 
     prevScrollY = currentScrollY;
 });
-
 
         function openTab(tabName) {
             for (tabLink of tabLinks) {
