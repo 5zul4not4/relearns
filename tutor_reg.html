@@ -15,14 +15,14 @@
     <nav class="navbar">
         
         <a href="#"><img src="images/logo.png" class="logo"></img></a>
-        <ul >
-          
-            <li><a href="index.html">Home</a></li>
-            <li><a href="parents_reg.html">Parents Signup</a></li>
-            <li><a href="students_reg.html">Students Signup</a></li>
-            <li><a href="tutuor_in.html">Teachers Login</a></li>
-            <li><a href="faq.html">Help & Support</a></li>
-            <li><a href="about.html">About</a></li>
+        <ul > 
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tutor_reg.html">Teachers Signup</a></li>
+          <li><a href="tutuor_in.html">Teachers Login</a></li>
+          <li><a href="students_reg.html">Students Signup</a></li>
+          <li><a href="students_in.html">Students Login</a></li>
+          <li><a href="faq.html">Help & Support</a></li>
+          <li><a href="about.html">About</a></li>
             <i class="fas fa-times"></i>
         </ul>
         <i class="fas fa-bars"></i>
@@ -48,7 +48,7 @@
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="tel" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
+        <input type="number" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number:</label>
@@ -106,13 +106,7 @@
         <label><input type="checkbox" onclick="checkpass()" id="check" required> I agree to the <a onclick="termsAndConditions(event)">terms and conditions.</a></label>
       </div>
 
-        <div class="apply">
-      <!-- Add other fields in a similar manner -->
-      <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
-      <input type="button" value="Cancel" onclick="window.history.back()";>
-      </div>
-
-        <div id="termstyle" class="modal">
+      <div id="termstyle" class="modal">
         <div class="modal-content">
           <h2>Terms and Conditions</h2>
           <p id="terms">
@@ -149,9 +143,16 @@
             By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.
           </p>
           <center>
-          <i class="fas fa-times" onclick="readTerms()"> close</i></center>
+          <i class="fas fa-times" onclick="readTerms()">close</i></center>
           <!-- Add your terms and conditions here -->
       </div>
+      </div>
+
+
+      <div class="apply">
+      <!-- Add other fields in a similar manner -->
+      <input type="button" value="Apply" onclick="openTermsAndConditions(event)">
+      <input type="button" value="Cancel" onclick="window.history.back()";>
       </div>
 
       <div id="termsModal" class="modal">
@@ -191,8 +192,6 @@
             By agreeing to these terms and conditions, both the hiring party and the teacher acknowledge their commitment to provide and receive quality home tuition services respectively, and to adhere to the terms set forth in this agreement.
           </p>
           <!-- Add your terms and conditions here -->
-
-      
           <div class="buttons">
           <input type="submit" onclick="acceptTerms()" value="Accept">
           <span id="decline" onclick="declineTerms()">Decline</span>
@@ -204,142 +203,6 @@
         <p>Copyright @ 2023 Relearns. All rights reserved.</p>
     </div>
   </form>
-  <script>
-      
-const navbar = document.querySelector('.navbar'); document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-
-        document.addEventListener('click', (event) => {
-            if(!navbar.contains(event.target)){
-navbar.classList.remove('show');
-document.querySelector('nav ul').classList.remove('show');
-            }
-        });
-
-        document.querySelector('.fas.fa-times').addEventListener('click', function () {
-            document.querySelector('nav ul').classList.remove('show');
-        })
-      
-const pass=document.querySelector("#password");
-const pass2=document.querySelector("#confirmPassword");
-const checkbox=document.querySelector("#check");
-function switchVisibility(){
-  if(pass.getAttribute("type")==="password")
-    pass.setAttribute("type","text");
-  else
-    pass.setAttribute("type","password");
-}
-
-function checkpass(){
-    if(pass.value===pass2.value){
-    }
-    else
-    {
-    checkbox.checked=false;
-    alert('Password does not match!');
-    }
-}
-
-
-
-
-    document.querySelector('form').addEventListener('submit', function(event) {
-      var fileInput = document.getElementById('fileInput');
-      var fileSize = fileInput.files[0].size; // Get the file size in bytes
-      var maxSize = 1048576; // Define the maximum allowed file size in bytes (e.g., 1MB)
-      var age = document.getElementById('age');
-      if (fileSize > maxSize) {
-        event.preventDefault(); // Prevent form submission
-        alert('File size exceeds the limit. Please choose a smaller file.');
-      }
-       else if(pass.value!==pass2.value){
-        event.preventDefault();
-        alert("Password doesn't match!");
-       }
-       else if(age.value<18){
-        event.preventDefault();
-        alert("Your age is not qualified!");
-        }
-       else
-        document.getElementById('myForm').submit();
-    });
-
-function openTermsAndConditions(event) {
-  event.preventDefault();
-  document.getElementById('termsModal').style.display = 'block';
-}
-
-function acceptTerms() {
-  document.getElementById('termsModal').style.display = 'none';
-  document.getElementById('myForm').submit();
-}
-
-function declineTerms() {
-  document.getElementById('termsModal').style.display = 'none';
-  alert('You must accept the terms and conditions to submit the form.');
-}
-
-function termsAndConditions(event) {
-  event.preventDefault();
-  document.getElementById('termstyle').style.display = 'block';
-}
-function readTerms() {
-  document.getElementById('termstyle').style.display = 'none';
-}
-  </script>
- <!-- <script>
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    
-    // Get form values
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastname").value;
-    var gender = document.getElementById("gender").value;
-    var age = document.getElementById("age").value;
-    var phone = document.getElementById("phone").value;
-    var email = document.getElementById("email").value;
-    var centerName = document.getElementById("centername").value;
-    var centerAddress = document.getElementById("centeraddress").value;
-    var qualification = document.getElementById("qualification").value;
-    var experience = document.getElementById("experience").value;
-    var interest = document.getElementById("interest").value;
-    var subject = document.getElementById("subject").value;
-    var mode = document.getElementById("mode").value;
-    var map = document.getElementById("address").value;
-
-
-
-
-    // Create a new window to print the details
-    var printWindow = window.open('','Form');
-    // Generate the content for printing
-    var content = "<h2>Registration Details</h2>" +
-                  "<strong>Tutor Name:</strong> " + firstName +" " +lastName+
-                  "<br><strong>Gender:</strong> " + gender +
-                  "<br><strong>Age:</strong> " + age +
-                  "<br><strong>Contact:</strong> " + phone +
-                  "<br><strong>Email:</strong> " + email +
-                  "<br><strong>Tuition Center:</strong> " + centerName +
-                  "<br><strong>Tuition Address:</strong> " + centerAddress +
-                  "<br><strong>Education Qualification : </strong> " + qualification +
-                  "<br><strong>Class:</strong> " + interest +
-                  "<br><strong>Subject:</strong> " + subject +
-                  "<br><strong><input type='button' onclick='window.print()' value='Print'></strong> "
-
-                  // Add other fields' values in a similar manner
-
-    // Set the content and print the window
-    printWindow.document.open();
-    printWindow.document.write(content);
-    printWindow.document.close();
-    
-
-    // Reset the form
-    document.getElementById("registrationForm");
-});
-
-  </script>-->
+<script src="script.js"></script>
 </body>
 </html>
