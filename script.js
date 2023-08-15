@@ -7,10 +7,14 @@ const navbar = document.querySelector('.navbar');
 const menuList = document.querySelector('nav ul');
 const fixedHeader = document.querySelector('.fix_head');
 
+function closeMenu() {
+    menuList.classList.remove('show');
+}
 
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
     menuList.classList.toggle('show');
+menuList.classList.remove('.fas.fa-bars');
 });
 
 // Add an event listener to close the menu when clicking outside
@@ -20,22 +24,9 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Auto-hide navigation menu on scroll
-let prevScrollY = window.scrollY;
-let isMenuVisible = true;
-
-window.addEventListener('scroll', function() {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > prevScrollY && isMenuVisible) {
-        navbar.classList.add('hidden');
-        isMenuVisible = false;
-    } else if (currentScrollY <= prevScrollY && !isMenuVisible) {
-        navbar.classList.remove('hidden');
-        isMenuVisible = true;
-    }
-
-    prevScrollY = currentScrollY;
+// Auto-close navigation menu when scrolling
+window.addEventListener('scroll', function () {
+    closeMenu();
 });
 
         function openTab(tabName) {
