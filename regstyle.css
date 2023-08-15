@@ -57,6 +57,8 @@ form-group{
         
     }
 
+
+
     nav .fas {
         
         display: block;
@@ -300,9 +302,15 @@ form-group{
         border: #e25c14 solid 2px;
         width: 94%;
     }
-    .hidden {
+
+    .hidden{
         transform: translateY(-100%);
-        }                          
+        }
+       
+    .navbar{
+        transition: transform 0.3s ease-in-out;
+        }    
+               
     #decline{
         width: 400px;
         font-size: 50px;
