@@ -209,7 +209,7 @@ form-group{
     {
         line-height: 120px;
     }
-    #qualification{
+    #qualification,#options{
         background-color: transparent;
         padding: 10px;
         font-style: italic;
