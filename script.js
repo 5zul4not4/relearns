@@ -3,21 +3,12 @@ var tabContents = document.getElementsByClassName('tab-contents');
 
 
 
-        function openTab(tabName) {
-            for (tabLink of tabLinks) {
-                tabLink.classList.remove('active-link');
-            }
-            for (tabContent of tabContents) {
-                tabContent.classList.remove('active-tab');
-            }
-            event.currentTarget.classList.add('active-link');
-            document.getElementById(tabName).classList.add('active-tab');
-        }
-
 const navbar = document.querySelector('.navbar');
 const menuList = document.querySelector('nav ul');
+const fixedHeader = document.querySelector('.fix_head');
 
 let prevScrollY = window.scrollY;
+let isMenuVisible = true; // Track if the menu is visible or not
 
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
@@ -35,14 +26,32 @@ document.addEventListener('click', (event) => {
 window.addEventListener('scroll', function() {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > prevScrollY) {
+    if (currentScrollY > prevScrollY && isMenuVisible) {
         navbar.classList.add('hidden');
-    } else {
+        fixedHeader.style.marginTop = '0'; // Adjust the margin
+        isMenuVisible = false;
+    } else if (currentScrollY <= prevScrollY && !isMenuVisible) {
         navbar.classList.remove('hidden');
+        fixedHeader.style.marginTop = '110px'; // Adjust the margin
+        isMenuVisible = true;
     }
 
     prevScrollY = currentScrollY;
 });
+
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+
     
 const pass=document.querySelector("#password");
 const pass2=document.querySelector("#confirmPassword");
