@@ -2,33 +2,54 @@
 <html>
 <head>
     <title>Registration Form</title>
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="regstyle.css">
 </head>
 <body>
 
 
   </style>
+<div class="container">
+    <div class="fix_head"></div>
 
-    <form id="registrationForm">
-      <h2>Teacher Registration Form</h2>
-      <div class="form-group">
+    <nav class="navbar">
+        
+        <a href="#"><img src="images/logo.png" class="logo"></img></a>
+        <ul >
+          
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tutor_reg.html">Teachers Signup</a></li>
+          <li><a href="tutuor_in.html">Teachers Login</a></li>
+          <li><a href="students_reg.html">Students Signup</a></li>
+          <li><a href="students_in.html">Students Login</a></li>
+          <li><a href="faq.html">Help & Support</a></li>
+          <li><a href="about.html">About</a></li>
+            <i class="fas fa-times"></i>
+        </ul>
+        <i class="fas fa-bars"></i>
+    </nav>
+</div>
+
+    <form id="registrationForm" action="https://5zul.000webhostapp.com/upload.php" method="post">
+      <h2>Students Registration Form</h2>
+      <div class="name">
         <label for="firstName">Personal information <span>*</span></label><br>
         <input type="text" id="firstName" name="firstName" placeholder="Firstname" required>
         <input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
       </div>  
-      <div class="form-group">
+      <div class="form-gender">
         <label>Gender:</label>
-        <label for="male"><input type="radio" id="male" name="gender" value="Male">Male</label>
-        <label for="female"><input type="radio" id="female" name="gender" value="Female">Female</label>
+        <input type="radio" id="gender" name="gender" value="Male">Male
+        <input type="radio" id="gender" name="gender" value="Female">Female
       </div>
       
       <div class="form-group">
         <label for="dob">Date of Birth:</label>
-        <input type="text" id="dob" name="dob" placeholder="00-00-0000" maxlength="10" required>
+        <input type="date" id="dob" name="dob" placeholder="00-00-0000" required>
       </div>
       <div class="form-group">
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="18" max="99" placeholder="Age" required>
+        <input type="tel" id="age" name="age" min="18" max="99" minlength="1" maxlength="2" placeholder="Enter your age" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number:</label>
@@ -38,117 +59,122 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
       </div>
-      <div class="form-group">
-        <label for="address">Tution center address:</label>
-        <input type="text" id="address" name="address" placeholder="Street/City/State" required>
-      </div><br>
+      <br>
 
-      
-
-      <label for="firstName">Educational Qualification <span>*</span></label>
+      <label for="firstName">Education detail <span>*</span></label>
       <div class="form-group">
-        <label for="qualification">Qualification:</label>
+        <label for="qualification">Studied in : </label>
         <select id="qualification" name="qualification" required>
-          <option value="">Highest Education</option>
-          <option value="High School">High School</option>
-          <option value="Bachelor's Degree">Bachelor's Degree</option>
-          <option value="Master's Degree">Master's Degree</option>
-          <option value="PhD">PhD</option>
-          <option value="PhD">Others</option>
+          <option disabled selected value>--Select--</option>
+          <option value="1st std">First Standard</option>
+          <option value="2nd std">Second Standard</option>
+          <option value="3rd std">Third Standard</option>
+          <option value="4th std">Fourth Standard</option>
+          <option value="5th std">Fifth Standard</option>
+          <option value="6th std">Six Standard</option>
+          <option value="7th std">Seventh Standard</option>
+          <option value="8th std">Eigth Standard</option>
+          <option value="9th std">Ninth Standard</option>
+          <option value="10th std">Tenth Standard</option>
+          <option value="11th std">Eleventh Standard</option>
+          <option value="12th std">Twelfth Standard</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="experience">Teaching Experience:</label>
-        <input type="number" id="experience" name="experience" placeholder="Number of years" min="0" required>
+        <label for="qualification">Board of education : </label>
+        <select id="qualification" name="qualification" required>
+          <option disabled selected value>--Select--</option>
+          <option value="CBSE">Centeral Board (CBSE)</option>
+          <option value="TNSB">State Board (TNSB)</option>
+          <option value="3rd std">Third Standard</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="interset">Subject : </label>
+        <input type="number" id="interest" name="interest" placeholder="ex: English, Science, Commerce" required>
       </div>
       <div class="form-group">
-        <label for="experience">Class you can teach : </label>
-        <input type="text" id="interest" name="interest" placeholder="Class 1-12" min="1" max="12" required>
+        <label for="subject">Home Address : </label>
+        <input type="text" id="subject" name="subject" placeholder="ex: house no., Street , City , State" required>
       </div>
+
       <div class="form-group">
-        <label for="experience">Subject you can teach : </label>
-        <input type="text" id="interest" name="interest" placeholder="Your preferable subject" min="0" required>
-      </div>
-      <div class="form-group">
-        <label for="experience">Mode of teach : </label><br>
-        <input type="checkbox" id="interest" name="interest"  required>At Student's Home<br>
-        <input type="checkbox" id="interest" name="interest"  required>At Your Place<br>
-        <input type="checkbox" id="interest" name="interest"  required>Online(if you have webcam and internet)
-      </div>
-      <div class="form-group">
-        <label for="address">Map Location:</label>
-        <input type="text" id="address" name="address" placeholder="Street/City/State" required>
+        <label for="gmap">Map Location (optional) : </label>
+        <input type="url" id="gmap" name="gmap" placeholder="Paste your map location link">
       </div><br>
 
-      <label for="firstName">Account<span>*</span></label>
+      <label for="account">Account<span>*</span></label>
 
       <div class="form-group">
-        <label for="password">Password:</label>
+        <label for="gmap">Create account password : </label>
+        <div class="rowsrch">
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <a id="show" onclick="switchVisibility()"><i class="fa-solid fa-eye"></i></a>
+      </div>
       </div>
       <div class="form-group">
         <label for="confirmPassword">Confirm Password:</label>
+        <div class="rowsrch">
         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
       </div>
-
-
-
-
-      <div class="form-group">
-        <label><input type="checkbox" required> I agree to the <a href="#">terms and conditions.</a></label>
       </div>
+        
       <div class="form-group">
-        <textarea id="comment" name="comment" class="comment-box" placeholder="Additional Comments"></textarea>
+        <label><input type="checkbox" onclick="checkpass()" id="check" required> I agree to the <a onclick="termsAndConditions(event)">terms and conditions.</a></label>
       </div>
+
+      <div id="termstyle" class="modal">
+        <div class="modal-content">
+          <h2>Terms and Conditions</h2>
+          <p id="terms">
+              1. Tutor selection: Clearly state the qualifications, expertise, and experience of the tutor who will be providing the home tuition services. <br>
+
+              2. Services provided: Outline the specific subjects or areas of study that the tutor will cover during the home tuition sessions.<br>
+
+              3. Schedule and duration: Specify the number of sessions per week, their duration (e.g., one hour), and the start and end dates of the tuition period.<br>
+
+              4. Location: Clearly state that the tuition will take place at the student's home and provide the address.<br>
+
+              5. Payments: Clearly outline the payment terms, including the hourly rate or monthly fee and the preferred method of payment.<br>
+
+              6. Cancellations and rescheduling: Explain the policy for cancelling or rescheduling tuition sessions, including any notice period required.<br>
+
+              7. Communication: Specify the preferred method of communication between the tutor and parents, such as phone calls, emails, or an online platform.<br>
+
+              8. Code of conduct: Emphasize the importance of maintaining a respectful and professional relationship between the tutor, student, and parents. Include guidelines on punctuality, dress code, confidentiality, and adherence to house rules.<br>
+
+              9. Progress tracking: Explain how the tutor will track and communicate the student's progress to the parents, such as through regular progress reports or meetings.<br>
+
+              10. Termination: State the conditions under which either party can terminate the agreement, along with any notice period required.<br>
+
+              11. Liability and indemnity: Clarify the responsibilities and liability of both the tutor and the parents in case of any accidents or damages during the tuition sessions.<br>
+
+              12. Confidentiality: Ensure that the tutor respects the privacy and confidentiality of the student and their family, refraining from sharing any personal information with third parties.<br>
+
+              13. Dispute resolution: Provide a procedure for resolving any disputes or disagreements that may arise during the course of the tuition.<br>
+
+              14. Agreement acceptance: Include a section for both the parents and the tutor to sign and date the agreement, indicating their understanding and acceptance of its terms.<br><br>
+
+              Remember, it is always advisable to consult with a legal professional to ensure that the terms and conditions are suitable for your specific situation and comply with any local regulations or laws.          
+</p>
+          <center>
+          <i class="fas fa-times" onclick="readTerms()">close</i></center>
+          <!-- Add your terms and conditions here -->
+      </div>
+      </div>
+
+
       <div class="apply">
       <!-- Add other fields in a similar manner -->
-      <button type="submit">Apply</button>
-      <button type="reset">Cancel</button>
+      <input type="submit" value="Apply">
+      <input type="button" value="Cancel" onclick="window.history.back()";>
       </div>
+      
+      <div class="copyright">
+        <p>Copyright @ 2023 Relearns. All rights reserved.</p>
+    </div>
   </form>
-  <script>
-    document.getElementById("registrationForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-
-    // Get form values
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastname").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-    var firstName = document.getElementById("firstName").value;
-
-    // Create a new window to print the details
-    var printWindow = window.open('','');
-
-    // Generate the content for printing
-    var content = "<h2>Registration Details</h2>" +
-                  "<strong>First Name:</strong> " + firstName +
-                  "<br><strong>Last Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName +
-                  "<br><strong>First Name:</strong> " + lastName 
-                  // Add other fields' values in a similar manner
-
-    // Set the content and print the window
-    printWindow.document.open();
-    printWindow.document.write(content);
-    printWindow.document.close();
-    printWindow.print();
-
-    // Reset the form
-    document.getElementById("registrationForm").reset();
-});
-
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
