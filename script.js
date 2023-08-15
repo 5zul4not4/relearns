@@ -1,6 +1,6 @@
 var tabLinks = document.getElementsByClassName('tab-links');
 var tabContents = document.getElementsByClassName('tab-contents');
-const navbar= document.querySelector('.navbar');
+
 
 
         function openTab(tabName) {
@@ -14,26 +14,34 @@ const navbar= document.querySelector('.navbar');
             document.getElementById(tabName).classList.add('active-tab');
         }
 
-        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-        document.querySelector('nav ul').classList.toggle('show');
-      });
+const navbar = document.querySelector('.navbar');
+const menuList = document.querySelector('nav ul'); // Add this line
 
+// Toggle the 'show' class for the menu list
+document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+    menuList.classList.toggle('show'); // Use the menuList variable
+});
 
+// Add an event listener to close the menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (!navbar.contains(event.target)) {
+        navbar.classList.remove('show');
+        menuList.classList.remove('show'); // Use the menuList variable
+    }
+});
+
+// Existing JavaScript code for auto-hiding
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos) {
-    navbar.classList.remove('hidden'); // Remove the 'hidden' class
-  } else {
-    navbar.classList.add('hidden');    // Add the 'hidden' class
-  }
-  prevScrollPos = currentScrollPos;
-}
-
-document.querySelector('nav ul').classList.remove('show');
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollPos > currentScrollPos) {
+        navbar.classList.remove('hidden'); // Remove the 'hidden' class
+    } else {
+        navbar.classList.add('hidden');    // Add the 'hidden' class
     }
-});
+    prevScrollPos = currentScrollPos;
+};
     
 const pass=document.querySelector("#password");
 const pass2=document.querySelector("#confirmPassword");
