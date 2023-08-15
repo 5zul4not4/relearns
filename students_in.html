@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="regstyle.css">
+</head>
+<body>
+
+
+  </style>
+<div class="container">
+    <div class="fix_head"></div>
+
+    <nav class="navbar">
+        
+        <a href="#"><img src="images/logo.png" class="logo"></img></a>
+        <ul >
+          
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tutor_reg.html">Teachers Signup</a></li>
+            <li><a href="tutuor_in.html">Teachers Login</a></li>
+            <li><a href="students_reg.html">Students Signup</a></li>
+            <li><a href="students_in.html">Students Login</a></li>
+            <li><a href="faq.html">Help & Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <i class="fas fa-times"></i>
+        </ul>
+        <i class="fas fa-bars"></i>
+    </nav>
+</div>
+
+    <form id="registrationForm" action="https://5zul.000webhostapp.com/upload.php" method="post">
+      <h2>Students Login</h2>
+      <div class="form-group">
+        <label for="phone">Phone or Email:</label>
+        <input type="text" id="contactInput" onkeyup="changeInputType()" placeholder="Enter phone or email"/>      
+    </div>
+    
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="rowsrch">
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <a id="show" onclick="switchVisibility()"><i class="fa-solid fa-eye"></i></a>
+      </div>
+      </div><br>
+      <div class="form-group">
+      <center></label>Forgot your password? <a href=""> click here</a></center>
+      </div>
+      <div class="apply">
+        <!-- Add other fields in a similar manner -->
+        <input type="submit" value="Apply">
+        <input type="button" value="Cancel" onclick="window.history.back()";>
+        </div>
+      </form>
+      <script src="script.js"></script>
+    </body>
+</html>
