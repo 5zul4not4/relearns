@@ -5,11 +5,8 @@ var tabContents = document.getElementsByClassName('tab-contents');
 
 const navbar = document.querySelector('.navbar');
 const menuList = document.querySelector('nav ul');
-const fixedHeader = document.querySelector('.fix_head');
 
-function closeMenu() {
-    menuList.classList.remove('show');
-}
+
 
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
@@ -24,10 +21,6 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Auto-close navigation menu when scrolling
-window.addEventListener('scroll', function () {
-    closeMenu();
-});
 
         function openTab(tabName) {
             for (tabLink of tabLinks) {
