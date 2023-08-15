@@ -2,6 +2,7 @@ var tabLinks = document.getElementsByClassName('tab-links');
 var tabContents = document.getElementsByClassName('tab-contents');
 const navbar= document.querySelector('.navbar');
 
+
         function openTab(tabName) {
             for (tabLink of tabLinks) {
                 tabLink.classList.remove('active-link');
@@ -15,14 +16,20 @@ const navbar= document.querySelector('.navbar');
 
         document.querySelector('.fas.fa-bars').addEventListener('click', function () {
         document.querySelector('nav ul').classList.toggle('show');
-      });
+      });
 
-      document.addEventListener('click', (event) => {
-          if(!navbar.contains(event.target)){
-navbar.classList.remove('show');
-document.querySelector('nav ul').classList.remove('show');
-          }
-      });
+
+let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    navbar.classList.remove('hidden'); // Remove the 'hidden' class
+  } else {
+    navbar.classList.add('hidden');    // Add the 'hidden' class
+  }
+  prevScrollPos = currentScrollPos;
+}
 
 document.querySelector('.fas.fa-times').addEventListener('click', function () {
           document.querySelector('nav ul').classList.remove('show');
@@ -193,15 +200,3 @@ okButton.addEventListener('click', function() {
   okButton.style.display = 'none';
 });
 
-const navbar = document.querySelector('.navbar');
-let prevScrollPos = window.pageYOffset;
-
-window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos) {
-    navbar.classList.remove('hidden'); // Remove the 'hidden' class
-  } else {
-    navbar.classList.add('hidden');    // Add the 'hidden' class
-  }
-  prevScrollPos = currentScrollPos;
-};
