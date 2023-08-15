@@ -166,3 +166,30 @@ function changeInputType() {
     input.type = "text";
   }
 }
+
+
+const optionsSelect = document.getElementById('options');
+const otherInput = document.getElementById('otherInput');
+const okButton = document.getElementById('okButton');
+
+optionsSelect.addEventListener('change', function() {
+  if (optionsSelect.value === 'other') {
+    otherInput.style.display = 'block';
+    okButton.style.display = 'block';
+  } else {
+    otherInput.style.display = 'none';
+    okButton.style.display = 'none';
+  }
+});
+
+okButton.addEventListener('click', function() {
+  const inputValue = otherInput.value;
+  const newOption = document.createElement('option');
+  newOption.value = inputValue;
+  newOption.textContent = inputValue;
+  optionsSelect.appendChild(newOption);
+  optionsSelect.value = inputValue; // Display the newly added value
+  otherInput.style.display = 'none';
+  okButton.style.display = 'none';
+});
+
