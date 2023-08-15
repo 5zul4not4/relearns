@@ -193,7 +193,7 @@ okButton.addEventListener('click', function() {
   okButton.style.display = 'none';
 });
 
-const navbar = document.getElementById('navbar');
+const navbar = document.querySelector('.navbar');
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
