@@ -300,6 +300,9 @@ form-group{
         border: #e25c14 solid 2px;
         width: 94%;
     }
+    .hidden {
+        transform: translateY(-100%);
+        }                          
     #decline{
         width: 400px;
         font-size: 50px;
