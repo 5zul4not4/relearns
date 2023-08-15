@@ -193,3 +193,15 @@ okButton.addEventListener('click', function() {
   okButton.style.display = 'none';
 });
 
+const navbar = document.getElementById('navbar');
+let prevScrollPos = window.pageYOffset;
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    navbar.classList.remove('hidden'); // Remove the 'hidden' class
+  } else {
+    navbar.classList.add('hidden');    // Add the 'hidden' class
+  }
+  prevScrollPos = currentScrollPos;
+};
