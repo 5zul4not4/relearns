@@ -80,7 +80,7 @@ form-group{
         width: 50%;
         /* Increased the width to accommodate the menu items */
         right: 0;
-        height: 48vh;
+        height: 55vh;
         transform: translateX(100%);
         /* Off-canvas menu, initially hidden */
         transition: transform 0.3s ease-in-out;
