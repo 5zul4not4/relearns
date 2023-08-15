@@ -11,7 +11,6 @@ const menuList = document.querySelector('nav ul');
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
     menuList.classList.toggle('show');
-menuList.classList.remove('.fas.fa-bars');
 });
 
 // Add an event listener to close the menu when clicking outside
