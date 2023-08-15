@@ -15,33 +15,34 @@ var tabContents = document.getElementsByClassName('tab-contents');
         }
 
 const navbar = document.querySelector('.navbar');
-const menuList = document.querySelector('nav ul'); // Add this line
+const menuList = document.querySelector('nav ul');
+
+let prevScrollY = window.scrollY;
 
 // Toggle the 'show' class for the menu list
 document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-    menuList.classList.toggle('show'); // Use the menuList variable
+    menuList.classList.toggle('show');
 });
 
 // Add an event listener to close the menu when clicking outside
 document.addEventListener('click', (event) => {
     if (!navbar.contains(event.target)) {
-        navbar.classList.remove('show');
-        menuList.classList.remove('show'); // Use the menuList variable
+        menuList.classList.remove('show');
     }
 });
 
-// Existing JavaScript code for auto-hiding
-let prevScrollPos = window.pageYOffset;
+// Auto-hide navigation menu on scroll
+window.addEventListener('scroll', function() {
+    const currentScrollY = window.scrollY;
 
-window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-        navbar.classList.remove('hidden'); // Remove the 'hidden' class
+    if (currentScrollY > prevScrollY) {
+        navbar.classList.add('hidden');
     } else {
-        navbar.classList.add('hidden');    // Add the 'hidden' class
+        navbar.classList.remove('hidden');
     }
-    prevScrollPos = currentScrollPos;
-};
+
+    prevScrollY = currentScrollY;
+});
     
 const pass=document.querySelector("#password");
 const pass2=document.querySelector("#confirmPassword");
