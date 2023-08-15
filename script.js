@@ -31,9 +31,9 @@ window.onscroll = function() {
   prevScrollPos = currentScrollPos;
 }
 
-document.querySelector('.fas.fa-times').addEventListener('click', function () {
-          document.querySelector('nav ul').classList.remove('show');
-      })
+document.querySelector('nav ul').classList.remove('show');
+    }
+});
     
 const pass=document.querySelector("#password");
 const pass2=document.querySelector("#confirmPassword");
