@@ -92,6 +92,19 @@ form-group{
         transform: translateX(0);
         /* Show the menu when 'show' class is applied */
     }
+nav ul.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-icon {
+    display: none;
+    cursor: pointer;
+  }
 
     nav ul li {
         display: block;
