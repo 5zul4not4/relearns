@@ -8,8 +8,12 @@
    <p>Your details:</p>
 
    <?php
-   // Connect to the database
-   $conn = mysqli_connect($host, $username, $password, $database);
+    // Connect to the database
+$host = 'localhost';
+$username = 'id21034020_relearns';
+$password = '0nlineDb.';
+$database = 'id21034020_relearns';
+$conn = mysqli_connect($host, $username, $password, $database);
 
    // Check connection
    if (!$conn) {
