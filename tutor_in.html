@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Aaj<!DOCTYPE html>
 <html>
 <head>
     <title>Registration Form</title>
@@ -24,9 +24,9 @@
             <li><a href="students_in.html">Students Login</a></li>
             <li><a href="faq.html">Help & Support</a></li>
             <li><a href="about.html">About us</a></li>
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times close-icon"></i>
         </ul>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars menu-icon"></i>
     </nav>
 </div>
 
@@ -53,6 +53,49 @@
         <input type="button" value="Cancel" onclick="window.history.back()";>
         </div>
       </form>
+<script>
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-icon {
+    display: none;
+    cursor: pointer;
+  }
+}const menuIcon = document.querySelector('.menu-icon');
+const closeIcon = document.querySelector('.close-icon');
+const navUl = document.querySelector('nav ul');
+
+menuIcon.addEventListener('click', () => {
+  navUl.classList.add('active');
+  menuIcon.style.display = 'none';
+  closeIcon.style.display = 'block';
+});
+
+closeIcon.addEventListener('click', () => {
+  navUl.classList.remove('active');
+  closeIcon.style.display = 'none';
+  menuIcon.style.display = 'block';
+});
+</script>
       <script src="script.js"></script>
     </body>
 </html>
