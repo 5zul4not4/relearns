@@ -496,7 +496,7 @@ nav .fas {
     .fix_head{
         margin-left: -20%;
         border: #0b0b0b solid 10px;
-        background-color: #101010;
+        background-color: grey;
         width: 150%;
         height: 70px;
         margin-top: -20px;
