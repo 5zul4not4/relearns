@@ -312,7 +312,7 @@ nav ul.active {
         display: flex;
         align-items: center;
         padding: 0px 10px 0px;
-        border: #e25c14 solid 2px;
+        border: #e25c14 solid 1px;
         width: 94%;
     }
 
