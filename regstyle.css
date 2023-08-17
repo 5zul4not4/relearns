@@ -46,8 +46,8 @@ form-group{
         position: fixed;
         top: 0;
         left: 0;
-width:300px;
-height:50px;
+width:400px;
+height:100px;
     }
     nav{
         position: relative;
@@ -118,7 +118,7 @@ nav ul.active {
     }
     .fix_head{
         margin-left: -20%;
-        background-color: #101010;
+        background-color: white;
         top: 0;
         width: 140%;
         height:110px;
