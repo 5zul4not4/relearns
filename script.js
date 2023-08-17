@@ -3,7 +3,7 @@ var tabContents = document.getElementsByClassName('tab-contents');
 
 
 
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('nav');
 const menuList = document.querySelector('nav ul');
 
 
@@ -13,11 +13,22 @@ document.querySelector('.fas.fa-bars').addEventListener('click', function () {
     menuList.classList.toggle('show');
 });
 
+document.querySelector('.fas.fa-times').addEventListener('click', function() {
+      menuList.classList.remove('show');
+  });
+
+
 // Add an event listener to close the menu when clicking outside
-document.addEventListener('click', (event) => {
+document.addEventListener('scroll', (event) => {
     if (!navbar.contains(event.target)) {
         menuList.classList.remove('show');
     }
+});
+
+document.addEventListener('click', (event) => {
+  if (!navbar.contains(event.target)) {
+      menuList.classList.remove('show');
+  }
 });
 
 
