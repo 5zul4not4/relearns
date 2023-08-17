@@ -439,6 +439,9 @@ nav .fas {
     }
 .logo{
         position: fixed;
+height:100px;
+top:0;
+margin-top:10px;
     }
     nav .fas {
         display: block;
