@@ -303,7 +303,7 @@ nav ul.active {
         
       }
 
-      input[type="password"], #password{
+      input[type="password"], #password,#otherInput,#okButton{
         border: none;
         outline: none;
         
