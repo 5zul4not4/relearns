@@ -45,44 +45,43 @@
                     <div class="result-box">
                     </div>
             </div>
-            <div class="tab-titles">
-                <p class="tab-links active-link" onclick="openTab('skills')">For Students</p>
-                <p class="tab-links" onclick="openTab('experience')">For Tutors</p>
-                <p class="tab-links" onclick="openTab('education')">For Parents</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <p>Are you a student struggling with a particular subject or looking to excel in your studies? Relearn offers you the chance to find experienced tutors who can provide personalized guidance in the comfort of your own home. Start your journey to academic success today.</p>
-                </ul>
-            </div>
-            <div class="tab-contents" id="experience">
-                <ul>
-                    <p>If you're a tutor who's passionate about teaching and willing to provide in-home tuition, Relearn is the place for you. Join our community of educators and help students achieve their academic goals. Register as a tutor today!</p>
-                </ul>
-            </div>
-            <div class="tab-contents" id="education">
-                <ul>
-                   <p>Parents, we understand the importance of quality education for your children. Relearn connects you with dedicated tutors who can provide one-on-one home tuition, ensuring your child's learning needs are met. Register now and give your child the best educational support!</p>
-<a href="students_reg.html" class="button">Register for Home Tuition</a>
-                </ul>
-            </div>
+            
         </div>
     </div>
-</div>
-</div>
-        </div>
-    </div>
+
     <!-- ----------ABOUT---------- -->
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    
                 </div>
+
+                
                 <div class="about-col-2">
                     <h2 class="sub-title">WHY RELEARN</h2>
                     <p>"Relearn, the platform that connects students with qualified tutors for personalized home tuition. Whether you're a student looking for extra help in your studies or a tutor wanting to share your expertise, Relearn is here to make learning convenient and effective."</p>
                    </div>
+                   <div class="tab-titles">
+                    <a class="tab-links active-link" id="alink" onclick="openTab('skills')">For Students</a>
+                    <a class="tab-links" id="alink" onclick="openTab('experience')">For Tutors</a>
+                    <a class="tab-links" id="alink" onclick="openTab('education')">For Parents</a>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                      <p>Are you a student struggling with a particular subject or looking to excel in your studies? Relearn offers you the chance to find experienced tutors who can provide personalized guidance in the comfort of your own home. Start your journey to academic success today.</p>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <p>If you're a tutor who's passionate about teaching and willing to provide in-home tuition, Relearn is the place for you. Join our community of educators and help students achieve their academic goals. Register as a tutor today!</p>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                       <p>Parents, we understand the importance of quality education for your children. Relearn connects you with dedicated tutors who can provide one-on-one home tuition, ensuring your child's learning needs are met. Register now and give your child the best educational support!</p>
+    <a style="color:#ff004f" href="students_reg.html" class="button">Register for Home Tuition</a>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -93,7 +92,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
+                    <h3 class="sub-title">Contact</h3>
                     <p><i class="fas fa-paper-plane"></i> relearnshelp@gmail.com</p>
                     <p><i class="fas fa-phone-square-alt"></i> 8680091250, 8825555798</p>
                     <div class="social-icons">
@@ -104,14 +103,16 @@
                     </div>
                     <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
+                <div class="query">
+                    <form class="msg">
+                        <input type="text" id="msg" name="Name" placeholder="Your Name" required>
+                        <input type="email" id="msg" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" id="msg" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn3">submit</button>
                     </form>
                 </div>
+
             </div>
         </div>
         <div class="copyright">
