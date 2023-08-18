@@ -1,338 +1,342 @@
 body {
-font-family: Arial, sans-serif;
-padding: 20px;
-width: 100%;
-}
-
-h2 {
-text-align: center;
-}
-
-form {
-display: flex;
-line-height: 20px;
-flex-direction: column;
-max-width: 100%;
-margin: 0 auto;
-padding: 20px 20px 20px;
-}
-
-span{
-    color: red;
-}
-
-label {
-margin-top: 10px;
-}
-
-
-.apply{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 100%;
+    }
+    
+    h2 {
     text-align: center;
-}
-
-input{
-    border: none;
-    outline: none;
-    right: 0;
-    border-bottom: black dashed 0.5px;
-}
-form-group{
-    border: rgb(223, 45, 45) solid 1px;
-}
-
-@media only screen and (min-width: 600px) {
-
-        .logo{
-        position: fixed;
-        top: 0;
-        left: 0;
-width:400px;
-height:100px;
     }
-    nav{
-        position: relative;
-    }
-
-    /* Show the navigation menu on small screens */
-    nav ul {
-        display: block;
-        
-    }
-
-
-
-    nav .fas {
-        
-        display: block;
-        font-size: 50px;
-        top: 0;
-        right: 0;
-        color: #eeeded;
-        margin-right: 30px;
-        position: fixed;
-        margin-top: 20px;
-    }
-    nav .fa-times{
-        margin-top: 67%;
-        color: rgb(215, 50, 50);
-    }
-
-    nav ul {
-        background: #eeeded;
-        position: fixed;
-        top: -15px;
-        width: 50%;
-        /* Increased the width to accommodate the menu items */
-        right: 0;
-        height: 55vh;
-        transform: translateX(100%);
-        /* Off-canvas menu, initially hidden */
-        transition: transform 0.3s ease-in-out;
-    }
-
-    nav ul.show {
-        transform: translateX(0);
-        /* Show the menu when 'show' class is applied */
-    }
-nav ul.active {
+    
+    form {
     display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .close-icon {
-    display: none;
-    cursor: pointer;
-  }
-
-    nav ul li {
-        display: block;
-        margin: 50px;
-        padding-top: 40px;
+    line-height: 20px;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
     }
-    nav ul li a{
-        color: rgb(184, 92, 92);
+    
+    span{
+        color: red;
     }
-    .fix_head{
-        margin-left: -20%;
-        background-color: white;
-        top: 0;
-        width: 140%;
-        height:110px;
-        position: fixed;
-    }
-
-    form{
-        background-color: white;
-        max-width: 100%;
-        font-size: 40px;
-        color: black;
-        padding-left: 40px;
-        border: none;
-        line-height: 90px;
-        margin: 20px 20px 20px 20px;
-        
-    }
-    input[type="button"], input[type="submit"]{
-        width: 400px;
-        height: 45%;
-        font-size: 50px;
-        margin-right: 30px;
-        color: white ;
-        border : none;
-        background-color: rgb(184, 92, 92);
-        border-radius: 40px;
-    }
-    input[type="button"]:hover, input[type="submit"]:hover{
-        color: white ;
-        background-color: grey;
-        border: none;
-        border-radius: 40px
-    }
-
-    a{
-        color: #1E90FF;
-        font-size: 45px;
-        text-decoration: none;
-    }
-  
+    
     label {
-        
-        font-size: 50px;
-        font-family: Arial, Helvetica, sans-serif;
-        }
-
+    margin-top: 10px;
+    }
+    
+    
+    .apply{
+        text-align: center;
+    }
+    
     input{
-        font-size: 50px;
-        background-color: transparent;
-        border: rgb(226, 92, 20) solid 2px;
-        width: 90%;
-        padding: 40px 30px 30px;
-        color: black;
-        }
-    input[type="checkbox"], input[type="radio"] {
-            margin-right: 20px ;
-            width: 50px;
-            height: 50px;
-            border: 2px solid #0c33df;
-            border-radius: 4px;
-            outline: none;
-            transition: border-color 0.3s;
-            cursor: pointer;
-        }
-        
-    input[type="checkbox"]:checked {
-            /* Style the checkbox when checked */
-            border-color: #1E90FF;
-            background-color: #1E90FF;
-        }
-    .comment-box {
-        width: 95%;
-        height: 200px;
-        font-size: 25px;
-        border: rgb(226, 92, 20) solid 2px;
-        
-    }
-
-    .form-gender{
-        font-size: 50px;
-        line-height: 30px;
-        margin: 40px 10px 40px;
-    }
-
-    p{
-        text-align: center;
-        font-size: 15px;
-    }
-
-    #firstName,#lastname{
-        width: 41%;
-        height: 45%;
-        padding: 40px 30px 30px;
-    }
-
-    select{
-        width: 97%;
-        height:130px;
-        font-size: 50px;
         border: none;
-        padding-left: 20px;
-        border: rgb(226, 92, 20) solid 2px;
+        outline: none;
+        right: 0;
+        border-bottom: black dashed 0.5px;
     }
-    .form-group
-    {
-        line-height: 120px;
+    form-group{
+        border: rgb(223, 45, 45) solid 1px;
     }
-    #qualification,#options{
-        background-color: transparent;
-        padding: 10px;
-        font-style: italic;
-    }
-
-    #adhar{
-        font-size:43px;
-    }
-        .form-adhar{
-        margin-top: 25px;
-        border: #e25c14 solid 2px;
-        padding: 20px;
-        text-align: center;
-        width: 93%;
-    }
-
-    input[type="file"]{
-        border: none;
-        margin-left: 50px;
-    }
-
-        .modal {
+    
+    @media only screen and (min-width: 600px) {
+    
+            .logo{
+            position: fixed;
+            top: 0;
+            margin-left: 30px;
+    width:400px;
+    height:100px;
+        }
+        nav{
+            position: relative;
+        }
+    
+        /* Show the navigation menu on small screens */
+        nav ul {
+            display: block;
+            
+        }
+    
+    
+    
+        nav .fas {
+            
+            display: block;
+            font-size: 50px;
+            top: 0;
+            right: 0;
+            color: #eeeded;
+            margin-right: 30px;
+            position: fixed;
+            margin-top: 20px;
+        }
+        nav .fa-times{
+            margin-top: 67%;
+            color: #eeeded;
+        }
+    
+        nav ul {
+            background: #eeeded;
+            position: fixed;
+            top: -12px;
+            width: 50%;
+            /* Increased the width to accommodate the menu items */
+            right: 0;
+            height: 55vh;
+            transform: translateX(100%);
+            /* Off-canvas menu, initially hidden */
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        nav ul.show {
+            transform: translateX(0);
+            /* Show the menu when 'show' class is applied */
+        }
+    nav ul.active {
+        display: flex;
+      }
+    
+      .fas.fa-bars {
+        display: block;
+        cursor: pointer;
+          color:brown;
+          margin-right: 80px;
+      }
+    
+      .fas.fa- {
         display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: scroll;
-        background-color: rgba(15, 15, 15, 0.4);
-      }
-      
-      .modal-content {
-        background-color: #fefefe;
-        margin: 50% auto;
-        max-height: 1000px;
-        text-align: left;
-        font-size: 30px;
-        padding: 20px;
-        border: 1px solid #888;
-        overflow: scroll;
-        width: 80%;
-      }
-      
-      .buttons {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 20px;
-      }
-      
-      button{
-        width: 400px;
-        font-size: 50px;
-        margin-right: 30px;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        background-color: rgb(250, 246, 246);
-      }
-
-      #terms{
-        border: 1px solid grey;
-        color: black;
-        font-size: 30px;
-        padding-left:10px;
-        text-align: left;
-      }
-    #show{
-        width: auto;
-        height: auto;
-        color: rgb(31, 81, 155);
-        border: none;
-        margin-right: 20px;
-        outline: none;
+        cursor: pointer;
         
       }
-
-      input[type="password"], #password,#otherInput,#okButton{
-        border: none;
-        outline: none;
-        
-      }
-    .rowsrch{
-        display: flex;
-        align-items: center;
-        padding: 0px 10px 0px;
-        border: #e25c14 solid 1px;
-        width: 94%;
-    }
-
-    .hidden{
-        transform: translateY(-100%);
+    
+        nav ul li {
+            display: block;
+            margin: 50px;
+            padding-top: 40px;
         }
-       
-    .navbar{
-        transition: transform 0.3s ease-in-out;
-        }    
-               
-    #decline{
-        width: 400px;
-        font-size: 50px;
-        text-align: center;
-        padding-top: 20px;
-        color: rgb(250, 246, 246) ;
-        border-radius: 50px;
-        background-color:rgb(174, 72, 92);
+        nav ul li a{
+            color: rgb(184, 92, 92);
+        }
+        .fix_head{
+            margin-left: -20%;
+            background-color: white;
+            top: 0;
+            width: 140%;
+            height:110px;
+            position: fixed;
+        }
+    
+        form{
+            background-color: white;
+            max-width: 100%;
+            font-size: 40px;
+            color: black;
+            padding-left: 40px;
+            border: none;
+            line-height: 90px;
+            margin: 20px 20px 20px 20px;
+            
+        }
+        input[type="button"], input[type="submit"]{
+            width: 400px;
+            height: 45%;
+            font-size: 50px;
+            margin-right: 30px;
+            color: white ;
+            border : none;
+            background-color: rgb(184, 92, 92);
+            border-radius: 40px;
+        }
+        input[type="button"]:hover, input[type="submit"]:hover{
+            color: white ;
+            background-color: grey;
+            border: none;
+            border-radius: 40px
+        }
+    
+        a{
+            color: #1E90FF;
+            font-size: 45px;
+            text-decoration: none;
+        }
+      
+        label {
+            
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            }
+    
+        input{
+            font-size: 50px;
+            background-color: transparent;
+            border: rgb(226, 92, 20) solid 2px;
+            width: 90%;
+            padding: 40px 30px 30px;
+            color: black;
+            }
+        input[type="checkbox"], input[type="radio"] {
+                margin-right: 20px ;
+                width: 50px;
+                height: 50px;
+                border: 2px solid #0c33df;
+                border-radius: 4px;
+                outline: none;
+                transition: border-color 0.3s;
+                cursor: pointer;
+            }
+            
+        input[type="checkbox"]:checked {
+                /* Style the checkbox when checked */
+                border-color: #1E90FF;
+                background-color: #1E90FF;
+            }
+        .comment-box {
+            width: 95%;
+            height: 200px;
+            font-size: 25px;
+            border: rgb(226, 92, 20) solid 2px;
+            
+        }
+    
+        .form-gender{
+            font-size: 50px;
+            line-height: 30px;
+            margin: 40px 10px 40px;
+        }
+    
+        p{
+            text-align: center;
+            font-size: 15px;
+        }
+    
+        #firstName,#lastname{
+            width: 41%;
+            height: 45%;
+            padding: 40px 30px 30px;
+        }
+    
+        select{
+            width: 97%;
+            height:130px;
+            font-size: 50px;
+            border: none;
+            padding-left: 20px;
+            border: rgb(226, 92, 20) solid 2px;
+        }
+        .form-group
+        {
+            line-height: 120px;
+        }
+        #qualification,#options{
+            background-color: transparent;
+            padding: 10px;
+            font-style: italic;
+        }
+    
+        #adhar{
+            font-size:43px;
+        }
+            .form-adhar{
+            margin-top: 25px;
+            border: #e25c14 solid 2px;
+            padding: 20px;
+            text-align: center;
+            width: 93%;
+        }
+    
+        input[type="file"]{
+            border: none;
+            margin-left: 50px;
+        }
+    
+            .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            background-color: rgba(15, 15, 15, 0.4);
+          }
+          
+          .modal-content {
+            background-color: #fefefe;
+            margin: 50% auto;
+            max-height: 1000px;
+            text-align: left;
+            font-size: 30px;
+            padding: 20px;
+            border: 1px solid #888;
+            overflow: scroll;
+            width: 80%;
+          }
+          
+          .buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+          }
+          
+          button{
+            width: 400px;
+            font-size: 50px;
+            margin-right: 30px;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(250, 246, 246);
+          }
+    
+          #terms{
+            border: 1px solid grey;
+            color: black;
+            font-size: 30px;
+            padding-left:10px;
+            text-align: left;
+          }
+        #show{
+            width: auto;
+            height: auto;
+            color: rgb(31, 81, 155);
+            border: none;
+            margin-right: 20px;
+            outline: none;
+            
+          }
+    
+          input[type="password"], #password,#otherInput,#okButton{
+            border: none;
+            outline: none;
+            
+          }
+        .rowsrch{
+            display: flex;
+            align-items: center;
+            padding: 0px 10px 0px;
+            border: #e25c14 solid 1px;
+            width: 94%;
+        }
+    
+        .hidden{
+            transform: translateY(-100%);
+            }
+           
+        .navbar{
+            transition: transform 0.3s ease-in-out;
+            }    
+                   
+        #decline{
+            width: 400px;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 20px;
+            color: rgb(250, 246, 246) ;
+            border-radius: 50px;
+            background-color:rgb(174, 72, 92);
+        }
     }
-}
+    
