@@ -19,7 +19,7 @@
           
           <li><a href="index.html">Home</a></li>
           <li><a href="tutor_reg.html">Teachers Signup</a></li>
-          <li><a href="tutuor_in.html">Teachers Login</a></li>
+          <li><a href="tutor_in.html">Teachers Login</a></li>
           <li><a href="students_reg.html">Students Signup</a></li>
           <li><a href="students_in.html">Students Login</a></li>
           <li><a href="faq.html">Help & Support</a></li>
@@ -94,6 +94,31 @@
           </div>
       </div>
 
+      <div class="form-group">
+        <label for="qualification">Subject : </label>
+        <select id="options" name="qualification" required>
+          <option disabled selected value>--Select--</option>
+          <option value="Tamil">Tamil</option>
+          <option value="English">English</option>
+          <option value="Maths">Maths</option>
+            <option value="Tamil">Science(1-10 std)</option>
+          <option value="English">Social</option>
+          <option value="Maths">Economics</option>
+            <option value="Tamil">Commerce</option>
+          <option value="English">Accountancy</option>
+            <option value="Tamil">Physics</option>
+          <option value="English">Chemistry</option>
+          <option value="Maths">Biology</option>
+            <option value="Tamil">Computer Application</option>
+          <option value="English">Computer Science</option>
+          <option value="other">Others</option>
+        </select>
+          <div class="rowsrch">
+       <input type="text" id="otherInput" style="display: none;">
+       <a id="okButton" style="display: none;">OK</a>
+          </div>
+      </div>
+        
       <div class="form-group">
         <label for="interset">Subject : </label>
         <input type="number" id="interest" name="interest" placeholder="ex: English, Science, Commerce" required>
