@@ -49,7 +49,7 @@
        </div> 
        <div class="apply"> 
          <!-- Add other fields in a similar manner --> 
-         <input type="submit" value="Login"> 
+         <input type="submit" onclick="checkadmin ()" value="Login"> 
          <input type="button" value="Cancel" onclick="window.history.back()";> 
          </div> 
        </form> 
@@ -80,7 +80,8 @@
      display: none; 
      cursor: pointer; 
    } 
- }const menuIcon = document.querySelector('.menu-icon'); 
+ }
+const menuIcon = document.querySelector('.menu-icon'); 
  const closeIcon = document.querySelector('.close-icon'); 
  const navUl = document.querySelector('nav ul'); 
     const user = document.getElementById('contactInput');
@@ -96,11 +97,13 @@
    closeIcon.style.display = 'none'; 
    menuIcon.style.display = 'block'; 
  }); 
+
+function checkadmin(){
 if(user.value!=="admin5zul" && pass.value!=="adminofrelearns"){
    event.preventDefault();// Prevent form submission
    alert('Admin Error_log');
 }
-    
+    }
  </script> 
        <script src="script.js"></script> 
      </body> 
