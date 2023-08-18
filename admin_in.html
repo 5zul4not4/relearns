@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+     <title>Admin Portal</title> 
+     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script> 
+     <link rel="stylesheet" href="regstyle.css"> 
+ </head> 
+ <body> 
+  
+  
+   </style> 
+ <div class="container"> 
+     <div class="fix_head"></div> 
+  
+     <nav class="navbar"> 
+  
+         <a href="#"><img src="images/logo.png" class="logo"></img></a> 
+         <ul > 
+  
+             <li><a href="index.html">Home</a></li> 
+             <li><a href="tutor_reg.html">Teachers Signup</a></li> 
+             <li><a href="tutor_in.html">Teachers Login</a></li> 
+             <li><a href="students_reg.html">Students Signup</a></li> 
+             <li><a href="students_in.html">Students Login</a></li> 
+             <li><a href="faq.html">Help & Support</a></li> 
+             <li><a href="about.html">About us</a></li> 
+             <i class="fas fa-times close-icon"></i> 
+         </ul> 
+         <i class="fas fa-bars menu-icon"></i> 
+     </nav> 
+ </div> 
+  
+     <form id="registrationForm" action="httos://5zul.000webhostapp.com/user.php" method="post"> 
+       <h2>Teachers Login</h2> 
+       <div class="form-group"> 
+         <label for="phone">Name of admin:</label> 
+         <input type="text" id="contactInput" name="email" placeholder="Enter admin name"/>       
+     </div> 
+  
+       <div class="form-group"> 
+         <label for="password">Password:</label> 
+         <div class="rowsrch"> 
+         <input type="password" id="password" name="password" placeholder="Enter your password" required> 
+         <a id="show" onclick="switchVisibility()"><i class="fa-solid fa-eye"></i></a> 
+       </div> 
+       </div><br> 
+       <div class="form-group"> 
+       <center></label>Forgot your password? <a href=""> click here</a></center> 
+       </div> 
+       <div class="apply"> 
+         <!-- Add other fields in a similar manner --> 
+         <input type="submit" value="Login"> 
+         <input type="button" value="Cancel" onclick="window.history.back()";> 
+         </div> 
+       </form> 
+ <script> 
+  
+ /* Styles for smaller screens */ 
+ @media (max-width: 768px) { 
+   nav ul { 
+     display: none; 
+     flex-direction: column; 
+     background-color: #333; 
+     position: absolute; 
+     top: 60px; 
+     left: 0; 
+     width: 100%; 
+   } 
+  
+   nav ul.active { 
+     display: flex; 
+   } 
+  
+   .menu-icon { 
+     display: block; 
+     cursor: pointer; 
+   } 
+  
+   .close-icon { 
+     display: none; 
+     cursor: pointer; 
+   } 
+ }const menuIcon = document.querySelector('.menu-icon'); 
+ const closeIcon = document.querySelector('.close-icon'); 
+ const navUl = document.querySelector('nav ul'); 
+    const user = document.getElementById('contactInput').value;
+  const pass = document.getElementById('password').value;
+ menuIcon.addEventListener('click', () => { 
+   navUl.classList.add('active'); 
+   menuIcon.style.display = 'none'; 
+   closeIcon.style.display = 'block'; 
+ }); 
+  
+ closeIcon.addEventListener('click', () => { 
+   navUl.classList.remove('active'); 
+   closeIcon.style.display = 'none'; 
+   menuIcon.style.display = 'block'; 
+ }); 
+if(user!=="admin5zul" && pass!=="adminofrelearns"){
+   event.preventDefault();// Prevent form submission
+   alert('Admin Error_log');
+   
+}
+    
+ </script> 
+       <script src="script.js"></script> 
+     </body> 
+ </html>
