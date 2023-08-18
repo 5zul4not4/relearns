@@ -30,7 +30,7 @@
      </nav> 
  </div> 
   
-     <form id="registrationForm" action="httos://5zul.000webhostapp.com/user.php" method="post"> 
+     <form id="registrationForm" action="https://5zul.000webhostapp.com/user.php" method="post"> 
        <h2>Teachers Login</h2> 
        <div class="form-group"> 
          <label for="phone">Name of admin:</label> 
@@ -83,8 +83,8 @@
  }const menuIcon = document.querySelector('.menu-icon'); 
  const closeIcon = document.querySelector('.close-icon'); 
  const navUl = document.querySelector('nav ul'); 
-    const user = document.getElementById('contactInput').value;
-  const pass = document.getElementById('password').value;
+    const user = document.getElementById('contactInput');
+  const pass = document.getElementById('password');
  menuIcon.addEventListener('click', () => { 
    navUl.classList.add('active'); 
    menuIcon.style.display = 'none'; 
@@ -96,10 +96,9 @@
    closeIcon.style.display = 'none'; 
    menuIcon.style.display = 'block'; 
  }); 
-if(user!=="admin5zul" && pass!=="adminofrelearns"){
+if(user.value!=="admin5zul" && pass.value!=="adminofrelearns"){
    event.preventDefault();// Prevent form submission
    alert('Admin Error_log');
-   
 }
     
  </script> 
