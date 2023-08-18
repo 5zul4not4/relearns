@@ -29,7 +29,7 @@
     </nav>
 </div>
 
-    <form id="registrationForm" action="https://5zul.000webhostapp.com/upload.php" method="post">
+    <form id="registrationForm" action="https://5zul.000webhostapp.com/upload.php" method="post" enctype=’multipart/form-data>
       <h2>Teachers Registration Form</h2>
       <div class="name">
         <label for="firstName">Personal information <span>*</span></label><br>
@@ -61,7 +61,7 @@
       <div class="form-adhar">
           <center>
         <label id="adhar" for="TuitionName">ID Proof(adhaar, Driving Licence, etc.,) <br>File size upto 1MB (.pdf) </label>
-        <input type="file" id="fileInput" name="file" placeholder="" accept=".pdf"  required >
+        <input type="file" id="fileInput" name="file" placeholder="" accept=".pdf" title="uploadPdf"  required />
           </center>
       </div><br>
        
