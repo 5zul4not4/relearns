@@ -46,6 +46,7 @@ document.addEventListener('click', (event) => {
 
     
 const pass=document.querySelector("#password");
+const user=document.querySelector("#admin");
 const pass2=document.querySelector("#confirmPassword");
 const checkbox=document.querySelector("#check");
 function switchVisibility(){
@@ -96,6 +97,13 @@ function acceptTerms() {
 document.getElementById('termsModal').style.display = 'none';
 document.getElementById('myForm').submit();
 }
+
+function checkadmin(){ 
+event.preventDefault();
+ if(user.value!=="admin5zul" && pass.value!=="adminofrelearns"){ 
+    alert('Admin Error_log'); 
+ } 
+     }
 
 function declineTerms() {
 document.getElementById('termsModal').style.display = 'none';
