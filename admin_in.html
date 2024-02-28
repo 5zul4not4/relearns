@@ -29,7 +29,7 @@
   <h2>Admin Login</h2> 
   <div class="form-group"> 
     <label for="username">Username:</label> 
-    <input type="text" id="username" name="username" placeholder="Enter admin username" required>       
+    <input type="text" id="username" name="username" placeholder="Enter Admin name" required>       
 </div> 
 
   <div class="form-group"> 
@@ -97,10 +97,14 @@ closeIcon.addEventListener('click', () => {
 }); 
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    if(usernameInput.value==="admin5zul" && passwordInput.value==="adminofrelearns"){
-}
-else
-  alert('Admin Error_log');
+    if(usernameInput.value === "Admin" && passwordInput.value === "relearns") {
+        // Redirect to user.php
+        window.location.href = "https://5zul.000webhostapp.com/user.php";
+    } else {
+        // Display error message
+        alert('Enter correct username and password');
+        event.preventDefault(); // Prevent the form from submitting
+    }
 });
 </script> 
    <script src="script.js"></script> 
