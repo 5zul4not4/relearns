@@ -27,8 +27,6 @@
          <i class="fas fa-bars menu-icon"></i> 
      </nav> 
  </div> 
- </body>
-  </html>
 
 <?php
 
@@ -80,3 +78,6 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+
+ </body>
+</html>
