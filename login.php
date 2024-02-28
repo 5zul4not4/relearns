@@ -1,3 +1,35 @@
+<html> 
+ <head> 
+     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script> 
+     <link rel="stylesheet" href="regstyle.css"> 
+ </head> 
+ <body> 
+  
+  
+   </style> 
+ <div class="container"> 
+     <div class="fix_head"></div> 
+  
+     <nav class="navbar"> 
+  
+         <a href="#"><img src="images/logo.png" class="logo"></img></a> 
+         <ul > 
+  
+             <li><a href="index.html">Home</a></li> 
+             <li><a href="tutor_reg.html">Teachers Signup</a></li> 
+             <li><a href="tutor_in.html">Teachers Login</a></li> 
+             <li><a href="students_reg.html">Students Signup</a></li> 
+             <li><a href="students_in.html">Students Login</a></li> 
+             <li><a href="faq.html">Help & Support</a></li> 
+             <li><a href="about.html">About us</a></li> 
+             <i class="fas fa-times close-icon"></i> 
+         </ul> 
+         <i class="fas fa-bars menu-icon"></i> 
+     </nav> 
+ </div> 
+ </body>
+  </html>
+
 <?php
 
  // Connect to the database
