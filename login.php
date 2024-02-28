@@ -1,18 +1,9 @@
-<html> 
- <head> 
-     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script> 
-     <link rel="stylesheet" href="regstyle.css"> 
- </head> 
- <body> 
-  
-  
-   </style> 
- <div class="container"> 
+"""<div class="container"> 
      <div class="fix_head"></div> 
   
      <nav class="navbar"> 
   
-         <a href="#"><img src="images/logo.png" class="logo"></img></a> 
+         <a href="#"><img src="images/logo.png" class="logo"></a> 
          <ul > 
   
              <li><a href="index.html">Home</a></li> 
@@ -26,7 +17,7 @@
          </ul> 
          <i class="fas fa-bars menu-icon"></i> 
      </nav> 
- </div> 
+ </div> """
 
 <?php
 
@@ -78,6 +69,3 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-
- </body>
-</html>
