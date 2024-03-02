@@ -105,12 +105,6 @@ body {
           margin-right: 80px;
       }
     
-      .fas.fa- {
-        display: none;
-        cursor: pointer;
-        
-      }
-    
         nav ul li {
             display: block;
             margin: 50px;
