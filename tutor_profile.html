@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Admin Portal</title> 
+    <script src="https://kit.fontesome.com/e674bba739.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="regstyle.css"> 
+</head> 
+<body> 
+
+<div class="container" style="margin-top: 70px;"> 
+    <div class="fix_head"><p id="stdReq"><br>Request from students : <span id="Request">6</span><br><br></p>
+        </div> 
+
+    <nav class="navbar"> 
+
+        <a href="#"><img src="images/logo.png" class="logo"></img></a> 
+        <ul >              
+            <li><a href="login.php">Account</a></li> 
+            <li><a href="tutor_reg.html">Edit Profile</a></li> 
+            <li><a href="tutor_in.html">Logout</a></li> 
+            <li><a href="students_reg.html">Delete Account</a></li>
+            <li><a href="faq.html">Help & Support</a></li> 
+            <li><a href="about.html">About us</a></li>
+            <i class="fas fa-times close-icon"></i> 
+        </ul> 
+        <i class="fas fa-bars menu-icon"><img src="images/profile.png" alt="profile"/></i>
+    </nav> 
+
+</div> 
+
+<style>
+    #stdReq{
+        text-align: center;
+        color: blue;
+        margin-top: 110px;
+        font-size: 50px;
+        background-color: white;
+    }
+
+    .displayReq{
+        display: none;
+        background-color: rgb(216, 37, 37);
+        color: rgba(253, 253, 251, 0.925);
+        border: 2px solid grey;
+        border-right: 2px dashed red;
+        border-radius: 40px;
+        margin-top: 50px;
+    }
+    b{
+        padding-left: 20px;
+    }
+    hr{
+        color: rgb(12, 12, 12);
+    }
+
+    #displayReqContainer{
+        margin-top: 250px;
+    }
+</style>
+
+<div id="displayReqContainer"><br>
+    <!-- This container will hold dynamically generated displayReq elements -->
+    <div class="displayReq"><br>
+        <b style="font-size: 50px;">Student ID  : </b> <br> <br>
+        <hr></hr>
+        <b style="font-size: 50px;">Student class  : </b> <br><br>
+        <b style="font-size: 50px;">Student Subject : </b> <br><br>
+        <b style="font-size: 50px;">Board of Exam  : </b> <br><br>
+        <b style="font-size: 50px;">Nearby Location : </b> <br><br>
+        <b style="font-size: 50px;">Student Name : </b> <br><br>
+        <button style="color:  rgb(216, 37, 37);margin-left: 70px;">Accept</button>
+        <button style="color:  rgb(216, 37, 37);">Delete</button><br><br><br>
+
+    </div>
+
+</div>
+<br><br>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var requestCount = parseInt(document.getElementById('Request').innerText);
+        var displayReqContainer = document.getElementById('displayReqContainer');
+        var displayReqTemplate = document.querySelector('.displayReq');
+
+        for (var i = 0; i < requestCount; i++) {
+            var clone = displayReqTemplate.cloneNode(true);
+            clone.style.display = 'block';
+            displayReqContainer.appendChild(clone);
+        }
+    });
+</script> 
+</body>
+</html>
