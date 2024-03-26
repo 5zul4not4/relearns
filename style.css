@@ -64,7 +64,6 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
     font-size: 30px;
 }
 
@@ -246,7 +245,6 @@ nav .fas {
     }
 
     .header-text {
-        margin-top: 100%;
         font-size: 16px;
     }
 
@@ -285,7 +283,7 @@ nav .fas {
     }
 
     .header-text {
-        margin-top: 100%;
+        margin-top: 5%;
         font-size: 16px;
     }
 
@@ -750,7 +748,7 @@ nav .fas {
     }
 
     .header-text {
-        margin-top: 100%;
+        margin-top: 5%;
         font-size: 16px;
     }
 
@@ -789,7 +787,7 @@ nav .fas {
     }
 
     .header-text {
-        margin-top: 100%;
+        margin-top: 5%;
         font-size: 16px;
     }
 
