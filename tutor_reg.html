@@ -58,6 +58,10 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
       </div>
+        <div class="form-group">
+        <label for="subject">PIN Code : </label>
+        <input type="number" id="pincode" name="pincode" placeholder="ex: 123456" required>
+      </div>
       <div class="form-adhar">
           <center>
         <label id="adhar" for="TuitionName">ID Proof(adhaar, Driving Licence, etc.,) <br>File size upto 1MB (.pdf) </label>
@@ -80,7 +84,28 @@
 
       <div class="form-group">
         <label for="interset">Class you can teach : </label>
-        <input type="number" id="interest" name="interest" placeholder="Class 1-12th" required>
+        <select id="interest" name="interest" required>
+          <option disabled selected value>--Select--</option>
+          <option value="Tamil">Tamil</option>
+          <option value="English">English</option>
+          <option value="Maths">Maths</option>
+            <option value="Tamil">Science(1-10 std)</option>
+          <option value="English">Social</option>
+          <option value="Maths">Economics</option>
+            <option value="Tamil">Commerce</option>
+          <option value="English">Accountancy</option>
+            <option value="Tamil">Physics</option>
+          <option value="English">Chemistry</option>
+          <option value="Maths">Biology</option>
+            <option value="Tamil">Computer Application</option>
+          <option value="English">Computer Science</option>
+          <option value="other">Others</option>
+        </select>
+          <div class="rowsrch">
+       <input type="text" id="otherInput" style="display: none;">
+       <a id="okButton" style="display: none;">OK</a>
+          </div>
+     
       </div>
       <div class="form-group">
         <label for="subject">Subject you can teach : </label>
